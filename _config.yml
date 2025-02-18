@@ -1,0 +1,6 @@
+title: "Hanbyel Cho"
+description: "Hanbyel Cho's academic website"
+url: "https://hanbyelcho.info"
+
+plugins:
+  - jekyll-sitemap
