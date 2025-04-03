@@ -1,3 +1,3 @@
 # 4D LangSplat
 
-This is the website of [4D LangSplat](https://zrporz.github.io/4DLangSplat/).
+This is the website of [Instruct-4DGS: Efficient Dynamic Scene Editing via 4D Gaussian-based Static-Dynamic Separation](https://hanbyelcho.info/Instruct4DGS/).
