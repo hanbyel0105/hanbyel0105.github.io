@@ -161,14 +161,23 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
             <b>TL;DR:</b> We ground CLIP features into a set of 3D language Gaussians, which attains precise 3D language fields while being <font color="red"><b>199 &times;</b></font> faster than LERF.
           </p> -->
           <p>
-            <b>TL;DR:</b> We introduce a multimodal, object-wise video prompting approach combined with a status deformable network to learn 4D language fields. Our method achieves highly precise and efficient results for both time-sensitive and time-agnostic open-vocabulary queries across multiple benchmarks.
+            <b>TL;DR:</b> Efficient 4D dynamic scene editing method using 4D Gaussian Splatting, focusing on static 3D Gaussians and score distillation refinement to achieve faster, high-quality edits.
           </p>
         </div>
+        <div class="hero-body">
+          <img src="./static/images/figure_3_method_cr.jpg"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Overall pipeline of our proposed dynamic scene editing method (Instruct-4DGS): To obtain the target dynamic scene for editing, we first optimize the 4D Gaussians using a multi-camera captured video dataset. We then perform 3D Gaussian editing on the static canonical 3D Gaussians by editing only the multiview images corresponding to the first timestep. We apply score-based temporal refinement to mitigate motion artifacts without additional image editing.
+          </p>
+        </div>
+        <!-- TODO:Video
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/L2OzQ91eRG4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
-        <!-- TODO:Video -->
+        -->
       </div>
     </div>
     <!--/ Paper video. -->
