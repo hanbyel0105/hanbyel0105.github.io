@@ -43,19 +43,7 @@
           <i class="fas fa-home"></i>
       </span>
       </a>
-
-      <!-- <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://minghanqin.github.io/AvatarSVE/">
-            AvatarSVE
-          </a>
-        </div>
-      </div> -->
     </div>
-
   </div>
 </nav>
 
@@ -155,6 +143,27 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
 
 
 
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="column is-four-fifths">
+      <div class="content has-text-justified">
+        <p>
+          <b>TL;DR:</b> Efficient 4D dynamic scene editing method using 4D Gaussian Splatting, focusing on static 3D Gaussians and score distillation refinement to achieve faster, high-quality edits.
+        </p>
+      </div>      
+    </div>
+    <div class="column is-four-fifths">
+      <h2 class="title is-3 mb-3">Abstract</h2>
+      <div class="content has-text-justified mb-3">
+        <p>
+          Recent 4D dynamic scene editing methods require editing thousands of 2D images used for dynamic scene synthesis and updating the entire scene with additional training loops, resulting in several hours of processing to edit a single dynamic scene. Therefore, these methods are not scalable with respect to the temporal dimension of the dynamic scene (i.e., the number of timesteps). In this work, we propose Instruct-4DGS, an efficient dynamic scene editing method that is more scalable in terms of temporal dimension. To achieve computational efficiency, we leverage a 4D Gaussian representation that models a 4D dynamic scene by combining static 3D Gaussians with a Hexplane-based deformation field, which captures dynamic information. We then perform editing solely on the static 3D Gaussians, which is the minimal but sufficient component required for visual editing. To resolve the misalignment between the edited 3D Gaussians and the deformation field, which may arise from the editing process, we introduce a refinement stage using a score distillation mechanism. Extensive editing results demonstrate that Instruct-4DGS is efficient, reducing editing time by more than half compared to existing methods while achieving high-quality edits that better follow user instructions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 <section class="section">
@@ -162,9 +171,6 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <!-- <p>
-            <b>TL;DR:</b> We ground CLIP features into a set of 3D language Gaussians, which attains precise 3D language fields while being <font color="red"><b>199 &times;</b></font> faster than LERF.
-          </p> -->
           <p>
             <b>TL;DR:</b> Efficient 4D dynamic scene editing method using 4D Gaussian Splatting, focusing on static 3D Gaussians and score distillation refinement to achieve faster, high-quality edits.
           </p>
