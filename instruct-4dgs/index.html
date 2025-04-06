@@ -152,16 +152,68 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
         </p>
       </div>      
     </div>
-    <div class="column is-four-fifths">
-      <h2 class="title is-3 mb-3">Abstract</h2>
-      <div class="content has-text-justified mb-3">
-        <p>
-          Recent 4D dynamic scene editing methods require editing thousands of 2D images used for dynamic scene synthesis and updating the entire scene with additional training loops, resulting in several hours of processing to edit a single dynamic scene. Therefore, these methods are not scalable with respect to the temporal dimension of the dynamic scene (i.e., the number of timesteps). In this work, we propose Instruct-4DGS, an efficient dynamic scene editing method that is more scalable in terms of temporal dimension. To achieve computational efficiency, we leverage a 4D Gaussian representation that models a 4D dynamic scene by combining static 3D Gaussians with a Hexplane-based deformation field, which captures dynamic information. We then perform editing solely on the static 3D Gaussians, which is the minimal but sufficient component required for visual editing. To resolve the misalignment between the edited 3D Gaussians and the deformation field, which may arise from the editing process, we introduce a refinement stage using a score distillation mechanism. Extensive editing results demonstrate that Instruct-4DGS is efficient, reducing editing time by more than half compared to existing methods while achieving high-quality edits that better follow user instructions.
-        </p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 mb-3">Abstract</h2>
+        <div class="content has-text-justified mb-3">
+          <p>
+            Recent 4D dynamic scene editing methods require editing thousands of 2D images used for dynamic scene synthesis and updating the entire scene with additional training loops, resulting in several hours of processing to edit a single dynamic scene. Therefore, these methods are not scalable with respect to the temporal dimension of the dynamic scene (i.e., the number of timesteps). In this work, we propose Instruct-4DGS, an efficient dynamic scene editing method that is more scalable in terms of temporal dimension. To achieve computational efficiency, we leverage a 4D Gaussian representation that models a 4D dynamic scene by combining static 3D Gaussians with a Hexplane-based deformation field, which captures dynamic information. We then perform editing solely on the static 3D Gaussians, which is the minimal but sufficient component required for visual editing. To resolve the misalignment between the edited 3D Gaussians and the deformation field, which may arise from the editing process, we introduce a refinement stage using a score distillation mechanism. Extensive editing results demonstrate that Instruct-4DGS is efficient, reducing editing time by more than half compared to existing methods while achieving high-quality edits that better follow user instructions.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
+<section class="section">
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3 has-text-centered mb-3">Method</h2>
+
+
+
+        <h2 class="title is-3 has-text-centered mb-3">Method</h2>
+      </div>
+      <div class="hero-body mb-3">
+        <img src="./static/images/figure_3_method_cr.jpg"/>
+      </div>
+      <div class="content has-text-justified mb-3">
+        <p>Overall pipeline of our proposed dynamic scene editing method (Instruct-4DGS): To obtain the target dynamic scene for editing, we first optimize the 4D Gaussians using a multi-camera captured video dataset. We then perform 3D Gaussian editing on the static canonical 3D Gaussians by editing only the multiview images corresponding to the first timestep. We apply score-based temporal refinement to mitigate motion artifacts without additional image editing.</p>
+      </div>
+      <!-- TODO:Video
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/L2OzQ91eRG4"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      -->
+    </div>
+  </div>
+  <!--/ Paper video. -->
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
