@@ -185,7 +185,7 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
         </div>
         <div class="content has-text-justified mb-3">
           <p>
-            Overall pipeline of our proposed dynamic scene editing method (Instruct-4DGS): To obtain the target dynamic scene for editing, we first optimize the 4D Gaussians using a multi-camera captured video dataset. We then perform 3D Gaussian editing on the static canonical 3D Gaussians by editing only the multiview images corresponding to the first timestep. We apply score-based temporal refinement to mitigate motion artifacts without additional image editing.
+            <b>Overall pipeline of our proposed dynamic scene editing method (Instruct-4DGS):</b> To obtain the target dynamic scene for editing, we first optimize the 4D Gaussians using a multi-camera captured video dataset. We then perform 3D Gaussian editing on the static canonical 3D Gaussians by editing only the multiview images corresponding to the first timestep. We apply score-based temporal refinement to mitigate motion artifacts without additional image editing.
           </p>
         </div>
       </div>
@@ -203,6 +203,16 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
       <div class="column is-four-fifths">
 
         <h2 class="title is-3 has-text-centered mb-3">Results</h2>
+
+        <h3 class="title is-4">Qualitative Comparison</h3>
+        <div class="hero-body mb-3">
+          <img src="./static/images/figure_6_qual_2_cr.jpg"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Qualitative comparison of temporal consistency:</b> The baseline shows noticeable flickering artifacts across timesteps. In contrast, Instruct-4DGS effectively avoids such artifacts by editing only the static component with score-based temporal refinement.
+          </p>
+        </div>
 
         <h3 class="title is-4">Qualitative Comparison of Temporal Consistency</h3>
         <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 20px;">
@@ -332,16 +342,6 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
                  preload
                  playsinline
                  width="31%">
-                 <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_Durer.mp4"
-                 type="video/mp4">
-          </video>
-  
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="31%">
                  <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_Fauvism.mp4"
                  type="video/mp4">
           </video>
@@ -355,6 +355,16 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
                  <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_statue.mp4"
                  type="video/mp4">
           </video>
+  
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="31%">
+                 <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_Durer.mp4"
+                 type="video/mp4">
+          </video>
         </div>
   
       </div>
@@ -363,10 +373,7 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
 </section>
 
 
-
-
-
-
+<!-- Citation -->
 </section>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
