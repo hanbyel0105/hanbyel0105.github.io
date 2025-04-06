@@ -231,7 +231,7 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
             <b>Qualitative comparison of temporal consistency:</b> The baseline shows noticeable flickering artifacts across timesteps. In contrast, Instruct-4DGS effectively avoids such artifacts by editing only the static component with score-based temporal refinement.
           </p>
         </div>
-        
+
         <h3 class="title is-4">Ablation Study</h3>
         <div class="content has-text-centered mb-3" style="display: flex; justify-content: center; gap:0px;">
           <video id="replay-video"
@@ -282,7 +282,58 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
             <b>Ablation study of the dynamic scene editing method:</b> Each pie chart shows the proportion of user preferences (1st-4th ranks) for each method variant. Our proposed method (denoted as “Ours (w/o refine {E, D})”) achieves the highest preference score.
           </p>
         </div>
+
+        <h3 class="title is-4">Effectiveness of Score-based Temporal Refinement</h3>
+        <div class="content has-text-centered mb-3" style="display: flex; justify-content: center; gap:0px;">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23.5%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(a)_Fully SDS.mp4"
+                    type="video/mp4">
+          </video>
+        
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23.5%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(b)_Refine w original IP2P.mp4"
+                    type="video/mp4">
+          </video>
   
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23.5%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(c)_Ours w refine E and D.mp4"
+                    type="video/mp4">
+          </video>
+  
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23.5%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(d)_Ours wo refine E and D.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="hero-body mb-3">
+          <img src="./static/images/figure_4_sds_cr.jpg"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Effectiveness of score-based temporal refinement:</b> Score-based temporal refinement effectively resolves misalignment between the canonical 3D Gaussians and the original deformation field that arises during the 3D Gaussian editing process. Without requiring additional 2D image updates, this process completes dynamic scene editing within a few hundred iterations.
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
