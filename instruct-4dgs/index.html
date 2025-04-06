@@ -202,6 +202,47 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3 has-text-centered mb-3 mb-3">Results</h2>
+        <h3 class="title is-4">Qualitative Results on HyperNeRF</h3>
+        <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 8px;">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="22.5%">
+                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/original.mp4"
+                 type="video/mp4">
+          </video>
+
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23%">
+                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/ours_Durer.mp4"
+                 type="video/mp4">
+          </video>
+
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23%">
+                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/ours_utagawa.mp4"
+                 type="video/mp4">
+          </video>
+
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23%">
+                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/ours_van_gogh.mp4"
+                 type="video/mp4">
+          </video>
       </div>
 
       <h3 class="title is-4">Qualitative Comparison of Temporal Consistency</h3>
@@ -216,6 +257,39 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
                type="video/mp4">
         </video>
       </div>     
+
+      <h3 class="title is-4">Qualitative Results with Varying Camera Poses</h3>
+      <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 10px;">
+        <video id="replay-video"
+               controls
+               muted
+               preload
+               playsinline
+               width="31%">
+               <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_Durer.mp4"
+               type="video/mp4">
+        </video>
+
+        <video id="replay-video"
+               controls
+               muted
+               preload
+               playsinline
+               width="31%">
+               <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_Fauvism.mp4"
+               type="video/mp4">
+        </video>
+
+        <video id="replay-video"
+               controls
+               muted
+               preload
+               playsinline
+               width="31%">
+               <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_statue.mp4"
+               type="video/mp4">
+        </video>
+      </div>
 
       <h3 class="title is-4">Ablation Study</h3>
       <div class="content has-text-centered mb-3" style="display: flex; justify-content: center; gap:0px;">
@@ -272,95 +346,8 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
 </section>
 
 
-<!-- Results (ours) 
-<section class="section">
-  <div class="container is-max-widescreen">
 
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered mb-3 mb-3">More Results (ours)</h2>
-      </div>
-      
-      <h3 class="title is-4">Qualitative Results on HyperNeRF</h3>
-      <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 8px;">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="22.5%">
-                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/original.mp4"
-                 type="video/mp4">
-          </video>
 
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="23%">
-                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/ours_Durer.mp4"
-                 type="video/mp4">
-          </video>
-
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="23%">
-                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/ours_utagawa.mp4"
-                 type="video/mp4">
-          </video>
-
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="23%">
-                 <source src="./static/videos/ours_only/4_monocular_HyperNeRF/ours_van_gogh.mp4"
-                 type="video/mp4">
-          </video>
-      </div>
-
-      <h3 class="title is-4">Qualitative Results with Varying Camera Poses</h3>
-      <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 10px;">
-        <video id="replay-video"
-               controls
-               muted
-               preload
-               playsinline
-               width="31%">
-               <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_Durer.mp4"
-               type="video/mp4">
-        </video>
-
-        <video id="replay-video"
-               controls
-               muted
-               preload
-               playsinline
-               width="31%">
-               <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_Fauvism.mp4"
-               type="video/mp4">
-        </video>
-
-        <video id="replay-video"
-               controls
-               muted
-               preload
-               playsinline
-               width="31%">
-               <source src="./static/videos/ours_only/3_moving_camera/ours_varying_camera_pose_statue.mp4"
-               type="video/mp4">
-        </video>
-      </div>
-
-    </div>
-  </div>
-</section>
--->
 
 
 
