@@ -316,15 +316,15 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
 
 
 
-        <h3 class="title is-4">Visualization of Learned Features</h3>
-        <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 20px;">
+        <h3 class="title is-4">Ablation Study</h3>
+        <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 8px;">
           <video id="replay-video"
                  controls
                  muted
                  preload
                  playsinline
-                 width="45%">
-            <source src="./static/videos/rgblang-americano-clear.mp4"
+                 width="23%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(a)_Fully SDS.mp4"
                     type="video/mp4">
           </video>
         
@@ -333,22 +333,38 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
                  muted
                  preload
                  playsinline
-                 width="45%">
-            <source src="./static/videos/rgblang-cookie-clear.mp4"
+                 width="23%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(b)_Refine w original IP2P.mp4"
+                    type="video/mp4">
+          </video>
+
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(c)_Ours w refine E and D.mp4"
+                    type="video/mp4">
+          </video>
+
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="23%">
+            <source src="./static/videos/ours_only/2_ablation_study/method_(d)_Ours wo refine E and D.mp4"
                     type="video/mp4">
           </video>
         </div>
-        
 
         <div class="hero-body">
-          <img src="./static/images/teaser.png"/>
+          <img src="./static/images/figure_8_ablation_cr.jpg"/>
         </div>
         <div class="content has-text-justified">
           <p>
-            Visualization of the learned language features of our 4D LangSplat. We observe that 4D LangSplat effectively learns dynamic
-            semantic features that change over time, such as the gradual diffusion of coffee shown in the first two rows, and the “chicken” toggling
-            between open and closed states in the latter two rows. Additionally, our semantic field captures consistent features for semantics that
-            remain unchanged over time, with the clear object boundaries in the visualization demonstrating the precision of our semantic field.
+            Each pie chart shows the proportion of user preferences (1st-4th ranks) for each method variant. Our proposed method (denoted as “Ours (w/o refine {E, D})”) achieves the highest preference score.
           </p>
         </div>
 
