@@ -608,7 +608,7 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
   }
 </style>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', () => {
     const carousels = bulmaCarousel.attach('.carousel', {
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -617,8 +617,11 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
     });
 
     carousels.forEach(carousel => {
-      if (carousel.autoplay) {
+      if (carousel.autoplay || carousel.options.autoplay) {
+        console.warn("autoplay detected. Stopping...");
         carousel.stop();
+        carousel.options.autoplay = false;
+        carousel.autoplay = false;
       }
     });
   });
