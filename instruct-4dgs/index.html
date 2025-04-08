@@ -604,7 +604,17 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
 
 <style>
   .carousel {
-    overflow: hidden;
+    overflow: hidden !important;
+    position: relative;
+  }
+  .carousel-container,
+  .carousel-items {
+    overflow: hidden !important;
+    position: relative;
+  }
+  .carousel .item {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 </style>
 <script>
