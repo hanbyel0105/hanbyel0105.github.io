@@ -604,12 +604,7 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
 
 <style>
   .carousel {
-    overflow: hidden !important;
-    position: relative;
-  }
-  .carousel .item {
-    flex: 0 0 100%;
-    max-width: 100%;
+    overflow: hidden;
   }
 </style>
 <script>
@@ -618,10 +613,8 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
       slidesToShow: 1,
       slidesToScroll: 1,
       infinite: false,
-      autoplay: false,
-      breakpoints: {}
+      autoplay: false
     });
-
     carousels.forEach(carousel => {
       if (carousel.autoplay || carousel.options.autoplay) {
         console.warn("autoplay detected. Stopping...");
