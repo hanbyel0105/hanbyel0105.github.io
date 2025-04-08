@@ -603,12 +603,19 @@ Junmo Kim https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en
 </footer>
 
 <script>
-  bulmaCarousel.attach('.carousel', {
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    infinite: false,
-    autoplay: false,
-    overflow: hidden
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousels = bulmaCarousel.attach('.carousel', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      autoplay: false
+    });
+
+    carousels.forEach(carousel => {
+      if (carousel.autoplay) {
+        carousel.stop();
+      }
+    });
   });
 </script>
 
