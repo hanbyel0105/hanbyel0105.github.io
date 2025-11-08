@@ -1,0 +1,5 @@
+I am currently a Research Scientist at Samsung Electronics, working on AI-driven humanoid whole-body control and locomotion. My research integrates human motion understanding, reinforcement learning, and control theory to enable humanoid robots to learn and adapt from real-world human motion.
+
+I earned my PhD in Electrical Engineering from KAIST, where I was advised by Prof. Junmo Kim. My doctoral research focused on capturing and reconstructing human-related subjects—such as body pose and shape—under real-world conditions for practical applications in immersive environments.
+
+During my PhD studies, I gained valuable experience through two internships at Meta Reality Labs—one in Pittsburgh, PA, USA (2023), and another in Redmond, WA, USA (2024). I was also honored to be selected as a finalist for the Qualcomm Innovation Fellowship in both 2022 and 2023.
