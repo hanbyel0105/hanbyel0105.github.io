@@ -1,4 +1,4 @@
-I am currently a Research Scientist at Samsung Electronics, working on AI-driven humanoid whole-body control and locomotion. My research integrates human motion understanding, reinforcement learning, and control theory to enable humanoid robots to learn and adapt from real-world human motion.
+I am currently an AI Robotics Research Scientist at Samsung Electronics, working on AI-driven humanoid whole-body control and locomotion. My research integrates human motion understanding, reinforcement learning, and control theory to enable humanoid robots to learn and adapt from human motion in real-world environments.
 
 I earned my PhD in Electrical Engineering from KAIST, where I was advised by Prof. Junmo Kim. My doctoral research focused on capturing and reconstructing human-related subjects—such as body pose and shape—under real-world conditions for practical applications in immersive environments.
 
