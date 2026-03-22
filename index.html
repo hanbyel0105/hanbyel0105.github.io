@@ -43,610 +43,680 @@
 </head>
 
 <body>
-  <table
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <p class="name" style="text-align: center;">
-                    Hanbyel Cho
-                  </p>
+  <!-- Navigation Bar -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="toggle-icon sun-icon">☀️</span>
+        <span class="toggle-icon moon-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
 
-                  <p>I am currently an AI Robotics Research Scientist at <a href="https://www.samsung.com/us/">Samsung
-                      Electronics</a>, working on AI-driven humanoid whole-body control and locomotion. My research
-                    integrates human motion understanding, reinforcement learning, and control theory to enable humanoid
-                    robots to learn and adapt from human motion in real-world environments.</p>
-                  <p>I earned my PhD in Electrical Engineering from <a href="https://www.kaist.ac.kr/en/">KAIST</a>,
-                    where I was advised by Prof. <a
-                      href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>. My
-                    doctoral research focused on capturing and reconstructing human-related subjects—such as body pose
-                    and shape—under real-world conditions for practical applications in immersive environments.</p>
-                  <p>During my PhD studies, I gained valuable experience through two internships at <a
-                      href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>—one in Pittsburgh, PA, USA
-                    (2023), and another in Redmond, WA, USA (2024). I was also honored to be selected as a finalist for
-                    the <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship">Qualcomm
-                      Innovation Fellowship</a> in both 2022 and 2023.</p>
-                  <!-- <p>I recently earned my PhD in Electrical Engineering from <a href="https://www.kaist.ac.kr/en/">KAIST</a>, where I was advised by Prof. <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>. I previously obtained my MS (2020) and BS (2018) in Electrical Engineering from <a href="https://www.kaist.ac.kr/en/">KAIST</a>.</p>
+  <div class="main-content">
+    <table
+      style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr style="padding:0px">
+          <td style="padding:0px">
+            <table id="about"
+              style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr style="padding:0px">
+                  <td style="padding:2.5%;width:63%;vertical-align:middle">
+                    <p class="name" style="text-align: center;">
+                      Hanbyel Cho
+                    </p>
+
+                    <p>I am currently an AI Robotics Research Scientist at <a href="https://www.samsung.com/us/">Samsung
+                        Electronics</a>, working on AI-driven humanoid whole-body control and locomotion. My research
+                      integrates human motion understanding, reinforcement learning, and control theory to enable
+                      humanoid
+                      robots to learn and adapt from human motion in real-world environments.</p>
+                    <p>I earned my PhD in Electrical Engineering from <a href="https://www.kaist.ac.kr/en/">KAIST</a>,
+                      where I was advised by Prof. <a
+                        href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>. My
+                      doctoral research focused on capturing and reconstructing human-related subjects—such as body pose
+                      and shape—under real-world conditions for practical applications in immersive environments.</p>
+                    <p>During my PhD studies, I gained valuable experience through two internships at <a
+                        href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>—one in Pittsburgh, PA, USA
+                      (2023), and another in Redmond, WA, USA (2024). I was also honored to be selected as a finalist
+                      for
+                      the <a
+                        href="https://www.qualcomm.com/research/university-relations/innovation-fellowship">Qualcomm
+                        Innovation Fellowship</a> in both 2022 and 2023.</p>
+                    <!-- <p>I recently earned my PhD in Electrical Engineering from <a href="https://www.kaist.ac.kr/en/">KAIST</a>, where I was advised by Prof. <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>. I previously obtained my MS (2020) and BS (2018) in Electrical Engineering from <a href="https://www.kaist.ac.kr/en/">KAIST</a>.</p>
                 <p>My doctoral research focused on capturing and reconstructing human-related subjects—such as body pose and shape—under real-world conditions for practical applications in immersive environments. In particular, I investigated human body joint estimation in camera lens distortion scenarios and human body mesh reconstruction in the presence of ambiguities, such as occlusion.</p>
                 <p>During my PhD studies, I gained valuable experience through two internships at <a href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>—one in Pittsburgh, PA, USA (2023), and another in Redmond, WA, USA (2024). I was also honored to be selected as a finalist for the <a href="https://www.qualcomm.com/research/university-relations/innovation-fellowship">Qualcomm Innovation Fellowship</a> in both 2022 and 2023.</p> -->
-                  <p>If you're interested in collaborating, feel free to reach out!</p>
+                    <p>If you're interested in collaborating, feel free to reach out!</p>
 
-                  <p style="text-align:center">
-                    tlrl4658 [at] gmail.com&nbsp;/&nbsp;
-                    <a href="data/HanbyelCho-CV_250227.pdf">CV (updated: Feb 2025)</a> &nbsp;/&nbsp;
-                    <a href="data/HanbyelCho-bio_251108.txt">Bio</a> &nbsp;/&nbsp;
-                    <a href="https://scholar.google.com/citations?user=VvNXbu8AAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
-                    <a href="https://www.linkedin.com/in/hanbyelcho/?locale=en_US">Linkedin</a> &nbsp;<!-- /&nbsp; -->
-                    <!-- <a href="https://github.com/hanbyel0105">Github</a> -->
-                  </p>
-                </td>
-                <td style="padding:2.5%;width:37%;max-width:37%">
-                  <a href="images/HanbyelCho.jpeg"><img
-                      style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo"
-                      src="images/HanbyelCho.jpeg" class="hoverZoomLink"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <table
-            style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:0px">
-                  <table
-                    style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                    <tbody>
-                      <tr style="padding:0px">
-                        <td style="padding:2.5%;width:63%;vertical-align:middle">
-                          <h2>Research Focus</h2>
-                          <style>
-                            ul li {
-                              margin-bottom: 8px;
-                            }
-                          </style>
-                          <p>My research builds upon my background in <strong>computer vision and human motion
-                              understanding</strong>, extending it toward <strong>learning-based humanoid whole-body
-                              control and locomotion</strong>. I am broadly interested in <strong>computer
-                              vision</strong>, <strong>reinforcement learning</strong>, and <strong>robotics</strong>,
-                            with a focus on:</p>
-                          <ul>
-                            <li>Humanoid whole-body motion tracking and control</li>
-                            <li>Perception-driven locomotion and manipulation</li>
-                            <li>Imitation and policy learning from human motion</li>
-                            <li>Sim2real adaptation for large-scale embodied systems</li>
-                          </ul>
-                          <p>My long-term goal is to build <strong>generalizable humanoid agents</strong> capable of
-                            learning directly from human motion and adapting seamlessly to real-world dynamics.</p>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                    <p style="text-align:center" class="contact-links">
+                      <a href="data/HanbyelCho-email.txt">✉️ Email</a>
+                      <a href="data/HanbyelCho-CV_250227.pdf">📄 CV <span style="font-size:11px;opacity:0.6">(Feb
+                          2025)</span></a>
+                      <a href="data/HanbyelCho-bio_251108.txt">👤 Bio</a>
+                      <a href="https://scholar.google.com/citations?user=VvNXbu8AAAAJ&hl=en">🎓 Scholar</a>
+                      <a href="https://www.linkedin.com/in/hanbyelcho/?locale=en_US">💼 LinkedIn</a>
+                    </p>
+                  </td>
+                  <td style="padding:2.5%;width:37%;max-width:37%">
+                    <a href="images/HanbyelCho.jpeg"><img class="profile-photo" alt="profile photo"
+                        src="images/HanbyelCho.jpeg"></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
 
+            <table id="research"
+              style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr style="padding:0px">
+                  <td style="padding:0px">
+                    <table
+                      style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr style="padding:0px">
+                          <td style="padding:2.5%;width:63%;vertical-align:middle">
+                            <h2>Research Focus</h2>
+                            <p>My research builds upon my background in <strong>computer vision and human motion
+                                understanding</strong>, extending it toward <strong>learning-based humanoid whole-body
+                                control and locomotion</strong>. I am broadly interested in <strong>computer
+                                vision</strong>, <strong>reinforcement learning</strong>, and <strong>robotics</strong>,
+                              with a focus on:</p>
+                            <ul>
+                              <li>Humanoid whole-body motion tracking and control</li>
+                              <li>Perception-driven locomotion and manipulation</li>
+                              <li>Imitation and policy learning from human motion</li>
+                              <li>Sim2real adaptation for large-scale embodied systems</li>
+                            </ul>
+                            <p>My long-term goal is to build <strong>generalizable humanoid agents</strong> capable of
+                              learning directly from human motion and adapting seamlessly to real-world dynamics.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
 
-          <table
-            style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:0px">
-                  <table
-                    style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                    <tbody>
-                      <tr style="padding:0px">
-                        <td style="padding:2.5%;width:63%;vertical-align:middle">
-                          <h2>Work Experience</h2>
-                          <style>
-                            ul li {
-                              margin-bottom: 8px;
-                            }
-                          </style>
-                          <ul>
-                            <li>
-                              <strong><a href="https://www.samsung.com/us/">Samsung Electronics</a>, Future Robot AI
-                                Group</strong> | Aug 2025 - Present<br>
-                              <em>Research Scientist</em> (Manager: Donghan Koo)<br>
-                              <span>Seoul, South Korea</span>
-                            </li>
-                            <li>
-                              <strong><a href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>, XR Input
-                                Perception</strong> | Jun 2024 - Dec 2024<br>
-                              <em>Research Scientist Intern</em> (Manager: <a
-                                href="https://scholar.google.com/citations?hl=en&user=9HoiYnYAAAAJ">Cem Keskin</a>)<br>
-                              <span>Redmond, WA, USA</span>
-                            </li>
-                            <li>
-                              <strong><a href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>, Codec Avatars
-                                Lab</strong> | Dec 2023 - Feb 2024<br>
-                              <em>Research Scientist Intern</em> (Manager: <a
-                                href="https://scholar.google.com/citations?hl=en&user=OZDVlq0AAAAJ&view_op=list_works&sortby=pubdate">Wei
-                                Pu</a>)<br>
-                              <span>Pittsburgh, PA, USA</span>
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <table id="experience"
+              style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr style="padding:0px">
+                  <td style="padding:0px">
+                    <table
+                      style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr style="padding:0px">
+                          <td style="padding:2.5%;width:63%;vertical-align:middle">
+                            <h2>Work Experience</h2>
+                            <ul>
+                              <li>
+                                <strong><a href="https://www.samsung.com/us/">Samsung Electronics</a>, Future Robot AI
+                                  Group</strong> | Aug 2025 - Present<br>
+                                <em>Research Scientist</em> (Manager: Donghan Koo)<br>
+                                <span>Seoul, South Korea</span>
+                              </li>
+                              <li>
+                                <strong><a href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>, XR Input
+                                  Perception</strong> | Jun 2024 - Dec 2024<br>
+                                <em>Research Scientist Intern</em> (Manager: <a
+                                  href="https://scholar.google.com/citations?hl=en&user=9HoiYnYAAAAJ">Cem
+                                  Keskin</a>)<br>
+                                <span>Redmond, WA, USA</span>
+                              </li>
+                              <li>
+                                <strong><a href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>, Codec
+                                  Avatars
+                                  Lab</strong> | Dec 2023 - Feb 2024<br>
+                                <em>Research Scientist Intern</em> (Manager: <a
+                                  href="https://scholar.google.com/citations?hl=en&user=OZDVlq0AAAAJ&view_op=list_works&sortby=pubdate">Wei
+                                  Pu</a>)<br>
+                                <span>Pittsburgh, PA, USA</span>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
 
-          <table
-            style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:0px">
-                  <table
-                    style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                    <tbody>
-                      <tr style="padding:0px">
-                        <td style="padding:2.5%;width:63%;vertical-align:middle">
-                          <h2>Education</h2>
-                          <style>
-                            ul li {
-                              margin-bottom: 10px;
-                            }
-                          </style>
-                          <ul>
-                            <li>
-                              <strong><a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and
-                                  Technology</a> (KAIST)</strong> | Mar 2020 - Feb 2025<br>
-                              <em>PhD in Electrical Engineering</em> (Advisor: Prof. <a
-                                href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo
-                                Kim</a>)<br>
-                              Dissertation: High-Fidelity Human Body Model Reconstruction in Unconstrained
-                              Situations<br>
-                              <span>Daejeon, South Korea</span>
-                            </li>
-                            <li>
-                              <strong><a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and
-                                  Technology</a> (KAIST)</strong> | Mar 2018 - Feb 2020<br>
-                              <em>MS in Electrical Engineering</em> (Advisor: Prof. <a
-                                href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo
-                                Kim</a>)<br>
-                              Thesis: Improving Performance of Face Super-Resolution with Stochastic Attributes
-                              Modeling<br>
-                              <span>Daejeon, South Korea</span>
-                            </li>
-                            <li>
-                              <strong><a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and
-                                  Technology</a> (KAIST)</strong> | Mar 2013 - Feb 2018<br>
-                              <em>BS in Electrical Engineering</em><br>
-                              <span>Daejeon, South Korea</span>
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <table id="education"
+              style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr style="padding:0px">
+                  <td style="padding:0px">
+                    <table
+                      style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr style="padding:0px">
+                          <td style="padding:2.5%;width:63%;vertical-align:middle">
+                            <h2>Education</h2>
+                            <style>
+                              ul li {
+                                margin-bottom: 10px;
+                              }
+                            </style>
+                            <ul>
+                              <li>
+                                <strong><a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and
+                                    Technology</a> (KAIST)</strong> | Mar 2020 - Feb 2025<br>
+                                <em>PhD in Electrical Engineering</em> (Advisor: Prof. <a
+                                  href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo
+                                  Kim</a>)<br>
+                                Dissertation: High-Fidelity Human Body Model Reconstruction in Unconstrained
+                                Situations<br>
+                                <span>Daejeon, South Korea</span>
+                              </li>
+                              <li>
+                                <strong><a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and
+                                    Technology</a> (KAIST)</strong> | Mar 2018 - Feb 2020<br>
+                                <em>MS in Electrical Engineering</em> (Advisor: Prof. <a
+                                  href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo
+                                  Kim</a>)<br>
+                                Thesis: Improving Performance of Face Super-Resolution with Stochastic Attributes
+                                Modeling<br>
+                                <span>Daejeon, South Korea</span>
+                              </li>
+                              <li>
+                                <strong><a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and
+                                    Technology</a> (KAIST)</strong> | Mar 2013 - Feb 2018<br>
+                                <em>BS in Electrical Engineering</em><br>
+                                <span>Daejeon, South Korea</span>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle">
-                  <h2>Publications</h2>
-                  <p>My current research centers on learning-based humanoid whole-body control and locomotion, aiming to
-                    enable robots to learn agile and adaptive motion from data. Previously, I studied 3D human
-                    reconstruction and motion understanding, which naturally led to my current interest in AI-driven
-                    humanoid behavior learning. Below are my recent publications; some papers are <span
-                      class="highlight">highlighted</span>.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
+            <table id="publications"
+              style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:16px;width:100%;vertical-align:middle">
+                    <h2>Publications</h2>
+                    <p>My current research centers on learning-based humanoid whole-body control and locomotion, aiming
+                      to
+                      enable robots to learn agile and adaptive motion from data. Previously, I studied 3D human
+                      reconstruction and motion understanding, which naturally led to my current interest in AI-driven
+                      humanoid behavior learning. Below are my recent publications; some papers are <span
+                        class="highlight">highlighted</span>.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
 
 
-              <tr onmouseout="document.getElementById('img_iccv25_fairness').style.opacity='0'"
-                onmouseover="document.getElementById('img_iccv25_fairness').style.opacity='1'">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_iccv25_fairness' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2025_iccv_fairness" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2025_iccv_fairness.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2507.20284">
-                    <span class="papertitle">Controllable Feature Whitening for Hyperparameter-Free Bias
-                      Mitigation</span>
-                  </a>
-                  <br>
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="//scholar.google.com/citations?user=hUpQRD4AAAAJ&hl=en">Janghyeon Lee</a>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE/CVF International Conference on Computer Vision (<font color="red"><strong>ICCV</strong>
-                    </font>)</em>, 2025
-                  <br>
-                  <a href="https://arxiv.org/abs/2507.20284">arXiv</a>
-                  <p></p>
-                  <p>
-                    A lightweight and hyperparameter-free debiasing method that whitens feature representations to
-                    remove bias, achieving fairness and utility trade-off without adversarial learning.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row" onmouseout="document.getElementById('img_iccv25_fairness').style.opacity='0'"
+                  onmouseover="document.getElementById('img_iccv25_fairness').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_iccv25_fairness' style="opacity:0;"><video width=100% muted autoplay
+                          loop>
+                          <source src="images/2025_iccv_fairness" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2025_iccv_fairness.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2507.20284">
+                      <span class="papertitle">Controllable Feature Whitening for Hyperparameter-Free Bias
+                        Mitigation</span>
+                    </a>
+                    <br>
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="//scholar.google.com/citations?user=hUpQRD4AAAAJ&hl=en">Janghyeon Lee</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE/CVF International Conference on Computer Vision (<strong class="venue">ICCV</strong>)</em>,
+                    2025
+                    <br>
+                    <a href="https://arxiv.org/abs/2507.20284">arXiv</a>
+                    <p></p>
+                    <p>
+                      A lightweight and hyperparameter-free debiasing method that whitens feature representations to
+                      remove bias, achieving fairness and utility trade-off without adversarial learning.
+                    </p>
+                  </td>
+                </tr>
 
 
-              <tr onmouseout="document.getElementById('img_cvpr25_4dgs').style.opacity='0'"
-                onmouseover="document.getElementById('img_cvpr25_4dgs').style.opacity='1'" bgcolor="#ffffd0">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_cvpr25_4dgs' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2025_arxiv_4dgs.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2025_arxiv_4dgs.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://hanbyelcho.info/instruct-4dgs/">
-                    <span class="papertitle">Efficient Dynamic Scene Editing via 4D Gaussian-based Static-Dynamic
-                      Separation</span>
-                  </a>
-                  <br>
-                  <a href="https://scholar.google.com/citations?user=WilZkLEAAAAJ&hl=en&oi=ao">Joohyun Kwon</a>*,
-                  <strong>Hanbyel Cho</strong>*,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a> (*Equal
-                  contribution)
-                  <br>
-                  <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<font color="red">
-                      <strong>CVPR</strong></font>)</em>, 2025
-                  <br>
-                  <a href="https://hanbyelcho.info/instruct-4dgs/">project page</a>
-                  /
-                  <a href="https://arxiv.org/abs/2502.02091">arXiv</a>
-                  <p></p>
-                  <p>
-                    Efficient 4D dynamic scene editing method using 4D Gaussian Splatting, focusing on static 3D
-                    Gaussians and score distillation refinement to achieve faster, high-quality edits.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row highlighted"
+                  onmouseout="document.getElementById('img_cvpr25_4dgs').style.opacity='0'"
+                  onmouseover="document.getElementById('img_cvpr25_4dgs').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_cvpr25_4dgs' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2025_arxiv_4dgs.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2025_arxiv_4dgs.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://hanbyelcho.info/instruct-4dgs/">
+                      <span class="papertitle">Efficient Dynamic Scene Editing via 4D Gaussian-based Static-Dynamic
+                        Separation</span>
+                    </a>
+                    <br>
+                    <a href="https://scholar.google.com/citations?user=WilZkLEAAAAJ&hl=en&oi=ao">Joohyun Kwon</a>*,
+                    <strong>Hanbyel Cho</strong>*,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a> (*Equal
+                    contribution)
+                    <br>
+                    <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong
+                        class="venue">CVPR</strong>)</em>, 2025
+                    <br>
+                    <a href="https://hanbyelcho.info/instruct-4dgs/">project page</a>
+                    /
+                    <a href="https://arxiv.org/abs/2502.02091">arXiv</a>
+                    <p></p>
+                    <p>
+                      Efficient 4D dynamic scene editing method using 4D Gaussian Splatting, focusing on static 3D
+                      Gaussians and score distillation refinement to achieve faster, high-quality edits.
+                    </p>
+                  </td>
+                </tr>
 
 
 
 
-              <tr onmouseout="document.getElementById('img_aaai24_privacy').style.opacity='0'"
-                onmouseover="document.getElementById('img_aaai24_privacy').style.opacity='1'">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_aaai24_privacy' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2024_aaai_privacy" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2024_aaai_privacy.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2312.12488">
-                    <span class="papertitle">Foreseeing Reconstruction Quality of Gradient Inversion: An Optimization
-                      Perspective</span>
-                  </a>
-                  <br>
-                  <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>The 38th Annual AAAI Conference on Artificial Intelligence (<font color="red">
-                      <strong>AAAI</strong></font>)</em>, 2024
-                  <br>
-                  <a href="https://arxiv.org/abs/2312.12488">arXiv</a>
-                  <p></p>
-                  <p>
-                    Proposes a novel loss-aware vulnerability proxy (LAVP) for gradient inversion attacks in federated
-                    learning, using the maximum or minimum eigenvalue of the Hessian to capture sample vulnerabilities
-                    beyond traditional gradient norm.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row" onmouseout="document.getElementById('img_aaai24_privacy').style.opacity='0'"
+                  onmouseover="document.getElementById('img_aaai24_privacy').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_aaai24_privacy' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2024_aaai_privacy" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2024_aaai_privacy.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2312.12488">
+                      <span class="papertitle">Foreseeing Reconstruction Quality of Gradient Inversion: An Optimization
+                        Perspective</span>
+                    </a>
+                    <br>
+                    <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>The 38th Annual AAAI Conference on Artificial Intelligence (<strong
+                        class="venue">AAAI</strong>)</em>, 2024
+                    <br>
+                    <a href="https://arxiv.org/abs/2312.12488">arXiv</a>
+                    <p></p>
+                    <p>
+                      Proposes a novel loss-aware vulnerability proxy (LAVP) for gradient inversion attacks in federated
+                      learning, using the maximum or minimum eigenvalue of the Hessian to capture sample vulnerabilities
+                      beyond traditional gradient norm.
+                    </p>
+                  </td>
+                </tr>
 
 
-              <tr onmouseout="document.getElementById('img_iccv23_diffhmr').style.opacity='0'"
-                onmouseover="document.getElementById('img_iccv23_diffhmr').style.opacity='1'" bgcolor="#ffffd0">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_iccv23_diffhmr' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2023_iccv_diffhmr" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2023_iccv_diffhmr.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2308.02963">
-                    <span class="papertitle">Generative Approach for Probabilistic Human Mesh Recovery using Diffusion
-                      Models</span>
-                  </a>
-                  <br>
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE/CVF International Conference on Computer Vision (<font color="red"><strong>ICCV</strong>
-                    </font>)</em>, 2023, <em>CV4Metaverse Workshop</em>
-                  <br>
-                  <a href="https://arxiv.org/abs/2308.02963">arXiv</a>
-                  <p></p>
-                  <p>
-                    Proposes a novel generative framework for 3D human mesh recovery, leveraging denoising diffusion to
-                    model multiple plausible outcomes and address the inherent ambiguity in the task.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row highlighted"
+                  onmouseout="document.getElementById('img_iccv23_diffhmr').style.opacity='0'"
+                  onmouseover="document.getElementById('img_iccv23_diffhmr').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_iccv23_diffhmr' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2023_iccv_diffhmr" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2023_iccv_diffhmr.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2308.02963">
+                      <span class="papertitle">Generative Approach for Probabilistic Human Mesh Recovery using Diffusion
+                        Models</span>
+                    </a>
+                    <br>
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE/CVF International Conference on Computer Vision (<strong class="venue">ICCV</strong>)</em>,
+                    2023, <em>CV4Metaverse Workshop</em>
+                    <br>
+                    <a href="https://arxiv.org/abs/2308.02963">arXiv</a>
+                    <p></p>
+                    <p>
+                      Proposes a novel generative framework for 3D human mesh recovery, leveraging denoising diffusion
+                      to
+                      model multiple plausible outcomes and address the inherent ambiguity in the task.
+                    </p>
+                  </td>
+                </tr>
 
 
-              <tr onmouseout="document.getElementById('img_cvpr23_imphmr').style.opacity='0'"
-                onmouseover="document.getElementById('img_cvpr23_imphmr').style.opacity='1'" bgcolor="#ffffd0">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_cvpr23_imphmr' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2023_cvpr_imphmr" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2023_cvpr_imphmr.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2306.17651">
-                    <span class="papertitle">Implicit 3D Human Mesh Recovery using Consistency with Pose and Shape from
-                      Unseen-view</span>
-                  </a>
-                  <br>
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<font color="red">
-                      <strong>CVPR</strong></font>)</em>, 2023
-                  <br>
-                  <a href="https://arxiv.org/abs/2306.17651">arXiv</a>
-                  <p></p>
-                  <p>
-                    Leveraging neural feature fields to render multi-view feature maps and enforcing cross-view
-                    consistency enables accurate 3D human mesh recovery from a single image.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row highlighted"
+                  onmouseout="document.getElementById('img_cvpr23_imphmr').style.opacity='0'"
+                  onmouseover="document.getElementById('img_cvpr23_imphmr').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_cvpr23_imphmr' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2023_cvpr_imphmr" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2023_cvpr_imphmr.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2306.17651">
+                      <span class="papertitle">Implicit 3D Human Mesh Recovery using Consistency with Pose and Shape
+                        from
+                        Unseen-view</span>
+                    </a>
+                    <br>
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong
+                        class="venue">CVPR</strong>)</em>, 2023
+                    <br>
+                    <a href="https://arxiv.org/abs/2306.17651">arXiv</a>
+                    <p></p>
+                    <p>
+                      Leveraging neural feature fields to render multi-view feature maps and enforcing cross-view
+                      consistency enables accurate 3D human mesh recovery from a single image.
+                    </p>
+                  </td>
+                </tr>
 
 
-              <tr onmouseout="document.getElementById('img_fg23_hmrvit').style.opacity='0'"
-                onmouseover="document.getElementById('img_fg23_hmrvit').style.opacity='1'">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_fg23_hmrvit' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2023_fg_hmrvit" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2023_fg_hmrvit.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://ieeexplore.ieee.org/document/10042731/">
-                    <span class="papertitle">Video Inference for Human Mesh Recovery with Vision Transformer</span>
-                  </a>
-                  <br>
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE International Conference on Automatic Face and Gesture Recognition (IEEE FG)</em>, 2023
-                  <br>
-                  <a href="https://ieeexplore.ieee.org/document/10042731/">arXiv</a>
-                  <p></p>
-                  <p>
-                    Replacing naive GRU-based modeling with a Vision Transformer and a learnable Channel Rearranging
-                    Matrix reduces motion fragmentation, boosting human mesh recovery accuracy, robustness, and
-                    efficiency.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row" onmouseout="document.getElementById('img_fg23_hmrvit').style.opacity='0'"
+                  onmouseover="document.getElementById('img_fg23_hmrvit').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_fg23_hmrvit' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2023_fg_hmrvit" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2023_fg_hmrvit.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://ieeexplore.ieee.org/document/10042731/">
+                      <span class="papertitle">Video Inference for Human Mesh Recovery with Vision Transformer</span>
+                    </a>
+                    <br>
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE International Conference on Automatic Face and Gesture Recognition (IEEE FG)</em>, 2023
+                    <br>
+                    <a href="https://ieeexplore.ieee.org/document/10042731/">arXiv</a>
+                    <p></p>
+                    <p>
+                      Replacing naive GRU-based modeling with a Vision Transformer and a learnable Channel Rearranging
+                      Matrix reduces motion fragmentation, boosting human mesh recovery accuracy, robustness, and
+                      efficiency.
+                    </p>
+                  </td>
+                </tr>
 
 
-              <tr onmouseout="document.getElementById('img_fg23_masked').style.opacity='0'"
-                onmouseover="document.getElementById('img_fg23_masked').style.opacity='1'">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_fg23_masked' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2023_fg_masked" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2023_fg_masked_2.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2305.01905">
-                    <span class="papertitle">Localization using Multi-Focal Spatial Attention for Masked Face
-                      Recognition</span>
-                  </a>
-                  <br>
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
-                  Dongmin Cho,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE International Conference on Automatic Face and Gesture Recognition (IEEE FG)</em>, 2023
-                  <br>
-                  <a href="https://arxiv.org/abs/2305.01905">arXiv</a>
-                  <p></p>
-                  <p>
-                    Masked face recognition approach that leverages multi-focal spatial attention to precisely isolate
-                    unmasked features.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row" onmouseout="document.getElementById('img_fg23_masked').style.opacity='0'"
+                  onmouseover="document.getElementById('img_fg23_masked').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_fg23_masked' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2023_fg_masked" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2023_fg_masked_2.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2305.01905">
+                      <span class="papertitle">Localization using Multi-Focal Spatial Attention for Masked Face
+                        Recognition</span>
+                    </a>
+                    <br>
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
+                    Dongmin Cho,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE International Conference on Automatic Face and Gesture Recognition (IEEE FG)</em>, 2023
+                    <br>
+                    <a href="https://arxiv.org/abs/2305.01905">arXiv</a>
+                    <p></p>
+                    <p>
+                      Masked face recognition approach that leverages multi-focal spatial attention to precisely isolate
+                      unmasked features.
+                    </p>
+                  </td>
+                </tr>
 
 
 
 
 
-              <tr onmouseout="document.getElementById('img_icip22_attention').style.opacity='0'"
-                onmouseover="document.getElementById('img_icip22_attention').style.opacity='1'">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_icip22_attention' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2022_icip_attention" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2022_icip_attention.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2207.13423">
-                    <span class="papertitle">Rethinking Efficacy of Softmax for Lightweight Non-Local Neural
-                      Networks</span>
-                  </a>
-                  <br>
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <a href="https://scholar.google.com/citations?user=Ry-j7pcAAAAJ&hl=en">Youngsoo Kim</a>,
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE International Conference in Image Processing (ICIP)</em>, 2022
-                  <br>
-                  <a href="https://arxiv.org/abs/2207.13423">arXiv</a>
-                  <p></p>
-                  <p>
-                    Replacing softmax in non-local blocks with a simple scaling factor mitigates its over-reliance on
-                    vector magnitude, thereby improving performance, robustness, and efficiency.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row" onmouseout="document.getElementById('img_icip22_attention').style.opacity='0'"
+                  onmouseover="document.getElementById('img_icip22_attention').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_icip22_attention' style="opacity:0;"><video width=100% muted autoplay
+                          loop>
+                          <source src="images/2022_icip_attention" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2022_icip_attention.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2207.13423">
+                      <span class="papertitle">Rethinking Efficacy of Softmax for Lightweight Non-Local Neural
+                        Networks</span>
+                    </a>
+                    <br>
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <a href="https://scholar.google.com/citations?user=Ry-j7pcAAAAJ&hl=en">Youngsoo Kim</a>,
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=dQg6UosAAAAJ">Jaesung Ahn</a>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=uYCWUQwAAAAJ">Hyeong Gwon Hong</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE International Conference in Image Processing (ICIP)</em>, 2022
+                    <br>
+                    <a href="https://arxiv.org/abs/2207.13423">arXiv</a>
+                    <p></p>
+                    <p>
+                      Replacing softmax in non-local blocks with a simple scaling factor mitigates its over-reliance on
+                      vector magnitude, thereby improving performance, robustness, and efficiency.
+                    </p>
+                  </td>
+                </tr>
 
-              <tr onmouseout="document.getElementById('img_iccv21_camdist').style.opacity='0'"
-                onmouseover="document.getElementById('img_iccv21_camdist').style.opacity='1'" bgcolor="#ffffd0">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_iccv21_camdist' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2021_iccv_camdist" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2021_iccv_camdist.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2111.15056">
-                    <span class="papertitle">Camera Distortion-aware 3D Human Pose Estimation in Video with
-                      Optimization-based Meta-Learning</span>
-                  </a>
-                  <br>
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <a href="https://scholar.google.com/citations?user=PYXTN_QAAAAJ&hl=en&oi=ao">Jaemyung Yu</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE/CVF International Conference on Computer Vision (<font color="red"><strong>ICCV</strong>
-                    </font>)</em>, 2021
-                  <br>
-                  <a href="https://arxiv.org/abs/2111.15056">arXiv</a>
-                  <p></p>
-                  <p>
-                    3D human pose estimation model that leverages MAML and synthetic distorted data to rapidly adapt to
-                    various camera distortions without requiring calibration.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row highlighted"
+                  onmouseout="document.getElementById('img_iccv21_camdist').style.opacity='0'"
+                  onmouseover="document.getElementById('img_iccv21_camdist').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_iccv21_camdist' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2021_iccv_camdist" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2021_iccv_camdist.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2111.15056">
+                      <span class="papertitle">Camera Distortion-aware 3D Human Pose Estimation in Video with
+                        Optimization-based Meta-Learning</span>
+                    </a>
+                    <br>
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <a href="https://scholar.google.com/citations?user=PYXTN_QAAAAJ&hl=en&oi=ao">Jaemyung Yu</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE/CVF International Conference on Computer Vision (<strong class="venue">ICCV</strong>)</em>,
+                    2021
+                    <br>
+                    <a href="https://arxiv.org/abs/2111.15056">arXiv</a>
+                    <p></p>
+                    <p>
+                      3D human pose estimation model that leverages MAML and synthetic distorted data to rapidly adapt
+                      to
+                      various camera distortions without requiring calibration.
+                    </p>
+                  </td>
+                </tr>
 
-              <tr onmouseout="document.getElementById('img_iccv21_whitening').style.opacity='0'"
-                onmouseover="document.getElementById('img_iccv21_whitening').style.opacity='1'">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_iccv21_whitening' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2021_iccv_whitening" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2021_iccv_whitening.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2108.10629">
-                    <span class="papertitle">Improving Generalization of Batch Whitening by Convolutional Unit
-                      Optimization</span>
-                  </a>
-                  <br>
-                  <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="https://scholar.google.com/citations?user=Ry-j7pcAAAAJ&hl=en">Youngsoo Kim</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>IEEE/CVF International Conference on Computer Vision (<font color="red"><strong>ICCV</strong>
-                    </font>)</em>, 2021
-                  <br>
-                  <a href="https://arxiv.org/abs/2108.10629">arXiv</a>
-                  <p></p>
-                  <p>
-                    Introduces a novel Convolutional Unit that aligns whitening theory with convolutional architectures,
-                    significantly boosting the stability and performance of Batch Whitening.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row" onmouseout="document.getElementById('img_iccv21_whitening').style.opacity='0'"
+                  onmouseover="document.getElementById('img_iccv21_whitening').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_iccv21_whitening' style="opacity:0;"><video width=100% muted autoplay
+                          loop>
+                          <source src="images/2021_iccv_whitening" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2021_iccv_whitening.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2108.10629">
+                      <span class="papertitle">Improving Generalization of Batch Whitening by Convolutional Unit
+                        Optimization</span>
+                    </a>
+                    <br>
+                    <a href="//scholar.google.com/citations?hl=en&user=V3oL9esAAAAJ">Yooshin Cho</a>,
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="https://scholar.google.com/citations?user=Ry-j7pcAAAAJ&hl=en">Youngsoo Kim</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>IEEE/CVF International Conference on Computer Vision (<strong class="venue">ICCV</strong>)</em>,
+                    2021
+                    <br>
+                    <a href="https://arxiv.org/abs/2108.10629">arXiv</a>
+                    <p></p>
+                    <p>
+                      Introduces a novel Convolutional Unit that aligns whitening theory with convolutional
+                      architectures,
+                      significantly boosting the stability and performance of Batch Whitening.
+                    </p>
+                  </td>
+                </tr>
 
-              <tr onmouseout="document.getElementById('img_arxiv20_facesr').style.opacity='0'"
-                onmouseover="document.getElementById('img_arxiv20_facesr').style.opacity='1'">
-                <td style="padding:16px;width:20%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='img_arxiv20_facesr' style="opacity:0;"><video width=100% muted autoplay loop>
-                        <source src="images/2020_arxiv_facesr" type="video/jpg">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/2020_arxiv_facesr.jpg' width=100%>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;vertical-align:middle">
-                  <a href="https://arxiv.org/abs/2207.07945">
-                    <span class="papertitle">Stochastic Attribute Modeling for Face Super-Resolution</span>
-                  </a>
-                  <br>
-                  <strong>Hanbyel Cho</strong>,
-                  <a href="https://scholar.google.com/citations?hl=en&user=J42y8NAAAAAJ">Yekang Lee</a>,
-                  <a href="https://scholar.google.com/citations?user=PYXTN_QAAAAJ&hl=en&oi=ao">Jaemyung Yu</a>,
-                  <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
-                  <br>
-                  <em>arXiv</em>, 2020
-                  <br>
-                  <a href="https://arxiv.org/abs/2207.07945">arXiv</a>
-                  <p></p>
-                  <p>
-                    Stochastic modeling-based face super-resolution method that separates deterministic and stochastic
-                    attributes to reduce uncertainty and improve reconstruction quality.
-                  </p>
-                </td>
-              </tr>
+                <tr class="pub-row" onmouseout="document.getElementById('img_arxiv20_facesr').style.opacity='0'"
+                  onmouseover="document.getElementById('img_arxiv20_facesr').style.opacity='1'">
+                  <td style="padding:16px;width:20%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='img_arxiv20_facesr' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2020_arxiv_facesr" type="video/jpg">
+                          Your browser does not support the video tag.
+                        </video></div>
+                      <img src='images/2020_arxiv_facesr.jpg' width=100%>
+                    </div>
+                  </td>
+                  <td style="padding:8px;width:80%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2207.07945">
+                      <span class="papertitle">Stochastic Attribute Modeling for Face Super-Resolution</span>
+                    </a>
+                    <br>
+                    <strong>Hanbyel Cho</strong>,
+                    <a href="https://scholar.google.com/citations?hl=en&user=J42y8NAAAAAJ">Yekang Lee</a>,
+                    <a href="https://scholar.google.com/citations?user=PYXTN_QAAAAJ&hl=en&oi=ao">Jaemyung Yu</a>,
+                    <a href="https://scholar.google.com/citations?user=GdQtWNQAAAAJ&hl=en&oi=ao">Junmo Kim</a>
+                    <br>
+                    <em>arXiv</em>, 2020
+                    <br>
+                    <a href="https://arxiv.org/abs/2207.07945">arXiv</a>
+                    <p></p>
+                    <p>
+                      Stochastic modeling-based face super-resolution method that separates deterministic and stochastic
+                      attributes to reduce uncertainty and improve reconstruction quality.
+                    </p>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2026 Hanbyel Cho · Design inspired by <a href="https://jonbarron.info/">Jon Barron</a></p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+      aria-label="Back to top">↑</button>
+
+  </div>
+
+  <!-- Dark Mode & Back to Top Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+    (function () {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+  </script>
+
 </body>
 
 </html>
