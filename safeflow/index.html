@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCCQVR803L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NCCQVR803L');
+    gtag('event', 'page_view', {
+      page_path: '/safeflow',
+      page_title: document.title,
+    });
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description"
+    content="SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective Safety Gating.">
+  <meta name="keywords"
+    content="SafeFlow, Humanoid Control, Text-Driven Motion Generation, Physics-Guided, Rectified Flow, Safety Gating, Whole-Body Control, Unitree G1, Motion Generation, Real-Time Control, OOD Robustness, Reflow, Safety Gate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective
+    Safety Gating</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .contribution-box {
+      background: #f8f9fa;
+      border-left: 4px solid;
+      border-radius: 6px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contribution-box.green {
+      border-color: #2ecc71;
+    }
+
+    .contribution-box.blue {
+      border-color: #3498db;
+    }
+
+    .contribution-box.orange {
+      border-color: #e67e22;
+    }
+
+    .contribution-box .contrib-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contribution-box p {
+      margin-bottom: 0 !important;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .result-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .result-table th,
+    .result-table td {
+      padding: 8px 12px;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .result-table th {
+      background: #f5f5f5;
+      font-weight: 600;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .result-table tr:hover {
+      background: #fafafa;
+    }
+
+    .result-table .best {
+      font-weight: 700;
+      color: #2ecc71;
+    }
+
+    .result-table .method-name {
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .result-table .baseline {
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://hanbyelcho.info/safeflow/">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Title & Author info. -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span style="color: #2ecc71; font-weight: 800;">Safe</span><span
+                style="color: #3498db; font-weight: 800;">Flow</span>: Real-Time Text-Driven Humanoid Whole-Body Control
+              via Physics-Guided Rectified Flow and Selective Safety Gating</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://hanbyelcho.info/">Hanbyel Cho</a>,</span>
+              <span class="author-block">
+                Sang-Hun Kim,</span>
+              <span class="author-block">
+                Jeonguk Kang,</span>
+              <span class="author-block">
+                Donghan Koo
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Future Robot AI Group, Samsung Electronics</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b>arXiv Preprint</b></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://hanbyelcho.info/safeflow/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://hanbyelcho.info/safeflow/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://hanbyelcho.info/safeflow/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser Video -->
+  <section class="hero teaser">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-centered">
+            <video id="teaser-video" controls muted preload playsinline width="100%"
+              style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+              <source src="./static/videos/SafeFlow_supplementary_video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-centered" style="margin-top: 0.5rem;">
+            <p style="color: #666; font-size: 0.95rem;">
+              <b>SafeFlow</b> enables real-time text-driven humanoid control with physics-guided generation and a
+              3-Stage Safety Gate.
+              When unsafe commands are detected, the system triggers a <b>safe fallback</b> to protect the robot.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TLDR & Abstract -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              <b>TL;DR:</b> SafeFlow is a real-time text-driven humanoid whole-body control framework that combines
+              physics-guided rectified flow matching for executable motion generation with a 3-Stage Safety Gate for
+              robust deployment under open-ended and out-of-distribution text inputs.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 mb-3">Abstract</h2>
+          <div class="content has-text-justified mb-3">
+            <p>
+              Recent advances in real-time interactive text-driven motion generation have enabled humanoids to perform
+              diverse behaviors. However, kinematics-only generators often exhibit physical hallucinations, producing
+              motion trajectories that are physically infeasible to track with a downstream motion tracking controller
+              or unsafe for real-world deployment. These failures often arise from the lack of explicit physics-aware
+              objectives for real-robot execution and become more severe under out-of-distribution (OOD) user inputs.
+              Hence, we propose <b>SafeFlow</b>, a text-driven humanoid whole-body control framework that combines
+              physics-guided motion generation with a 3-Stage Safety Gate driven by explicit risk indicators.
+              <b>SafeFlow</b> adopts a two-level architecture. At the high level, we generate motion trajectories using
+              Physics-Guided Rectified Flow Matching in a VAE latent space to improve real-robot executability, and
+              further accelerate sampling via Reflow to reduce the number of function evaluations (NFE) for real-time
+              control. The 3-Stage Safety Gate enables selective execution by detecting semantic OOD prompts using a
+              Mahalanobis score in text-embedding space, filtering unstable generations via a directional sensitivity
+              discrepancy metric, and enforcing final hard kinematic constraints such as joint and velocity limits
+              before passing the generated trajectory to a low-level motion tracking controller. Extensive experiments
+              on the Unitree G1 demonstrate that <b>SafeFlow</b> outperforms prior diffusion-based methods in success
+              rate, physical compliance, and inference speed, while maintaining diverse expressiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Key Contributions -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered mb-5">Key Contributions</h2>
+
+          <div class="contribution-box green">
+            <div class="contrib-title">
+              <i class="fas fa-robot" style="color: #2ecc71; margin-right: 6px;"></i>
+              SafeFlow Framework
+            </div>
+            <p>A real-time text-driven humanoid whole-body control framework that couples physics-guided generation with
+              deployment-time selective execution for robustness under unconstrained prompts.</p>
+          </div>
+
+          <div class="contribution-box blue">
+            <div class="contrib-title">
+              <i class="fas fa-bolt" style="color: #3498db; margin-right: 6px;"></i>
+              Physics-Guided Rectified Flow + Reflow
+            </div>
+            <p>Physics-guided rectified flow matching in a VAE latent space with reflow distillation reduces sampling to
+              a single function evaluation (NFE=1, 92.6 Hz generator-only; ~67.7 Hz with full safety pipeline) while
+              significantly improving the physical feasibility and real-robot executability of generated motions.</p>
+          </div>
+
+          <div class="contribution-box orange">
+            <div class="contrib-title">
+              <i class="fas fa-shield-alt" style="color: #e67e22; margin-right: 6px;"></i>
+              Training-Free 3-Stage Safety Gate
+            </div>
+            <p>Proactively blocks unsafe behaviors under OOD prompts via Mahalanobis semantic OOD filtering, directional
+              sensitivity discrepancy metric for generation instability, and hard kinematic screening.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Motivation -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 mb-3">Motivation</h2>
+          <div class="hero-body mb-3" style="max-width: 75%; margin: 0 auto;">
+            <img src="./static/images/fig1_failure.PNG" />
+          </div>
+          <div class="content has-text-justified mb-3">
+            <p>
+              <b>Failure Cases of a Baseline Text-Driven Reference Motion Generator:</b> While a kinematics-only
+              baseline produces physically feasible motions for simple prompts <b>(a)</b>, it often generates
+              <i>infeasible</i> references—including joint limit violations <b>(b)</b> and self-collisions
+              <b>(c)</b>—even under <i>in-distribution</i> commands. For <i>out-of-distribution</i> prompts, the
+              generation process becomes unstable, leading to structural collapse and <i>unsafe</i>, implausible
+              full-body configurations <b>(d)</b>. These failure modes underscore the critical need for physics-guided
+              generation and runtime safety gating.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Method -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 mb-3">Method</h2>
+          <div class="hero-body mb-3">
+            <img src="./static/images/fig2_overall.PNG" />
+          </div>
+          <div class="content has-text-justified mb-3">
+            <p>
+              <b>Overview of SafeFlow:</b> <b>Top (Deployment, Online):</b> A 3-Stage Safety Gate hierarchically
+              filters OOD semantics, generation instability, and kinematic violations. A reflow-accelerated high-level
+              motion generator provides physically feasible reference motions. If accepted, these are executed by the
+              downstream motion tracking controller; otherwise, a safe fallback is triggered. <b>Bottom (Training,
+                Offline):</b> The motion generator is trained via VAE latent learning and physics-guided flow matching
+              with reflow distillation (NFE=1). The motion tracking controller is trained in simulation via RL.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Results -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+
+          <h2 class="title is-3 has-text-centered mb-3">Results</h2>
+
+          <!-- Table 1: Physical Executability -->
+          <h3 class="title is-4">Physical Executability & Tracking Fidelity</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              <b>SafeFlow</b> improves generator compliance and downstream tracking fidelity.
+              Joint limit violations drop from <b>43.14%</b> to <b>3.08%</b>, and the success rate increases from
+              <b>80.6%</b> to <b>98.5%</b>.
+            </p>
+          </div>
+          <div style="overflow-x: auto; margin-bottom: 2rem;">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" style="text-align: left;">Method</th>
+                  <th colspan="2">Generator-Only</th>
+                  <th colspan="4">System-Level Tracking Fidelity</th>
+                </tr>
+                <tr>
+                  <th>JV ↓</th>
+                  <th>SC ↓</th>
+                  <th>Succ. ↑</th>
+                  <th>E<sub>mpjpe</sub> ↓</th>
+                  <th>E<sub>vel</sub> ↓</th>
+                  <th>E<sub>acc</sub> ↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="baseline">
+                  <td class="method-name">TextOp (Baseline)</td>
+                  <td>43.14%</td>
+                  <td>11.05%</td>
+                  <td>80.6%</td>
+                  <td>81.42</td>
+                  <td>0.23</td>
+                  <td>10.61</td>
+                </tr>
+                <tr>
+                  <td class="method-name">SafeFlow (Flow)</td>
+                  <td>12.75%</td>
+                  <td>7.25%</td>
+                  <td>92.7%</td>
+                  <td>55.32</td>
+                  <td>0.17</td>
+                  <td>7.98</td>
+                </tr>
+                <tr>
+                  <td class="method-name">SafeFlow (+ Guid.)</td>
+                  <td>6.32%</td>
+                  <td>4.39%</td>
+                  <td>98.0%</td>
+                  <td>46.39</td>
+                  <td>0.11</td>
+                  <td>5.48</td>
+                </tr>
+                <tr>
+                  <td class="method-name" style="font-weight: 700;">SafeFlow (+ Guid. & Reflow)</td>
+                  <td class="best">3.08%</td>
+                  <td class="best">1.42%</td>
+                  <td class="best">98.5%</td>
+                  <td class="best">40.89</td>
+                  <td class="best">0.09</td>
+                  <td class="best">4.54</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="hero-body mb-3">
+            <img src="./static/images/fig3_executability.JPG" />
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <b>Kinematic Feasibility and Tracking Stability:</b> Despite generating dynamic motions (left), our full
+              pipeline, <b>SafeFlow (+Guid. & Reflow)</b>, stabilizes kinematic references and improves tracking. <b>(a)
+                Generator-only:</b> SafeFlow suppresses erratic spikes in CoM velocity and joint acceleration. <b>(b)
+                System-level:</b> SafeFlow mitigates torque chattering and joint velocity spikes, enabling hardware-safe
+              tracking.
+            </p>
+          </div>
+
+          <h3 class="title is-4" style="margin-top: 2rem;">Deployment-Time Safety and Robustness</h3>
+          <div class="hero-body mb-3" style="max-width: 85%; margin: 0 auto;">
+            <img src="./static/images/fig4_instability_quintile.PNG" />
+          </div>
+          <div class="content has-text-justified mb-3">
+            <p>
+              <b>Generation Instability Score 𝓡 Detects Failure-Prone References:</b> Mean tracking MPJPE of 10-frame
+              windows grouped into absolute 𝓡 quintiles for In-Distribution (ID) and Out-of-Distribution (OOD)
+              sequences. MPJPE increases monotonically with 𝓡, indicating that high-𝓡 windows correspond to physically
+              unstable references.
+            </p>
+          </div>
+
+          <div class="hero-body mb-3" style="max-width: 85%; margin: 0 auto;">
+            <img src="./static/images/fig5_safety_gating.JPG" />
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <b>Instability Score-Triggered Safe Fallback:</b> When the instability score 𝓡 exceeds the fallback
+              threshold due to unstable flow dynamics, Stage 2 temporarily overrides the current command, injects a
+              standing prompt, and interpolates the tracker reference toward a predefined standing pose. Without Stage
+              2, the robot fails to track the unstable reference motion; with Stage 2 enabled, it remains stable and
+              awaits the next prompt.
+            </p>
+          </div>
+
+          <h3 class="title is-4" style="margin-top: 2rem;">Real-Time Performance</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              Via <b>reflow distillation</b>, <b>SafeFlow</b> achieves real-time inference at <b>~67.7 Hz</b> with the
+              complete safety pipeline, adding only <b>3.98 ms</b> overhead for the 3-Stage Safety Gate.
+            </p>
+          </div>
+          <div style="overflow-x: auto; margin-bottom: 2rem;">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th style="text-align: left;">Pipeline Component</th>
+                  <th>Added (ms) ↓</th>
+                  <th>Latency (ms) ↓</th>
+                  <th>Freq. (Hz) ↑</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="baseline">
+                  <td class="method-name">TextOp Generator (Baseline)</td>
+                  <td>-</td>
+                  <td>23.59</td>
+                  <td>42.4</td>
+                </tr>
+                <tr>
+                  <td class="method-name">SafeFlow Generator (+ Guid.)</td>
+                  <td>-</td>
+                  <td>172.03</td>
+                  <td>5.8</td>
+                </tr>
+                <tr>
+                  <td class="method-name">SafeFlow Generator (+ Guid. & Reflow)</td>
+                  <td>-</td>
+                  <td>10.80</td>
+                  <td>92.6</td>
+                </tr>
+                <tr>
+                  <td class="method-name" style="padding-left: 2rem;">+ Stage 1 (Semantic OOD)</td>
+                  <td>0.006</td>
+                  <td>10.81</td>
+                  <td>92.5</td>
+                </tr>
+                <tr>
+                  <td class="method-name" style="padding-left: 2rem;">+ Stage 2 (Generation Instability)</td>
+                  <td>3.96</td>
+                  <td>14.77</td>
+                  <td>67.7</td>
+                </tr>
+                <tr>
+                  <td class="method-name" style="padding-left: 2rem; font-weight: 700;">+ Stage 3 (Hard Kinematic
+                    Screen)</td>
+                  <td>0.013</td>
+                  <td class="best">14.78</td>
+                  <td class="best">67.7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Real-Robot Deployment -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+
+          <h2 class="title is-3 has-text-centered mb-3">Real-Robot Deployment</h2>
+
+          <div class="hero-body mb-3">
+            <img src="./static/images/fig6_deployment.JPG" />
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <b>Real-Robot Deployment of SafeFlow on Unitree G1:</b> The robot executes a continuous long-horizon
+              command sequence with smooth transitions across diverse behaviors, including upper-body gestures ("wave
+              hands", "punch") and whole-body actions ("squat down", "hop on left leg"). A high-risk prompt ("double
+              backflip") is included. The 3-Stage Safety Gate filters the unsafe reference and triggers a standing
+              fallback, allowing the robot to maintain balance and continue execution under subsequent prompts. This
+              demonstrates sim-to-real transferability and deployment-time safety on hardware.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{cho2026safeflow,
+    title     = {SafeFlow: Real-Time Text-Driven Humanoid Whole-Body Control via Physics-Guided Rectified Flow and Selective Safety Gating},
+    author    = {Cho, Hanbyel and Kim, Sang-Hun and Kang, Jeonguk and Koo, Donghan},
+    journal   = {arXiv preprint},
+    year      = {2026}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
