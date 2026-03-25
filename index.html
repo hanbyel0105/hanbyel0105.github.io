@@ -270,12 +270,12 @@
               <tbody>
 
 
-                <tr class="pub-row" onmouseout="document.getElementById('img_safeflow').style.opacity='0'"
+                <tr class="pub-row highlighted" onmouseout="document.getElementById('img_safeflow').style.opacity='0'"
                   onmouseover="document.getElementById('img_safeflow').style.opacity='1'">
                   <td style="padding:16px;width:20%;vertical-align:middle">
-                    <div class="one">
+                    <div class="one" style="background:#fff;display:flex;align-items:center;justify-content:center;">
                       <div class="two" id='img_safeflow' style="opacity:0;"></div>
-                      <img src='images/2025_safeflow.png' width=100%>
+                      <img src='images/2025_safeflow.png' width=100% style="object-fit:contain;">
                     </div>
                   </td>
                   <td style="padding:8px;width:80%;vertical-align:middle">
@@ -289,13 +289,16 @@
                     Jeonguk Kang,
                     Donghan Koo
                     <br>
-                    <em>arXiv Preprint</em>, 2025
+                    <em>arXiv Preprint</em>, 2026
                     <br>
                     <a href="https://hanbyelcho.info/safeflow/">project page</a>
+                    /
+                    <a href="https://hanbyelcho.info/safeflow/">arXiv</a>
                     <p></p>
                     <p>
-                      A real-time text-driven humanoid whole-body control framework that combines physics-guided
-                      rectified flow for natural motion generation with selective safety gating for robust deployment.
+                      A real-time text-driven humanoid whole-body control framework combining physics-guided rectified
+                      flow matching for executable motion generation with a 3-Stage Safety Gate for robust deployment
+                      under out-of-distribution text inputs on the Unitree G1.
                     </p>
                   </td>
                 </tr>
