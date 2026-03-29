@@ -271,10 +271,13 @@
 
 
                 <tr class="pub-row highlighted" onmouseout="document.getElementById('img_safeflow').style.opacity='0'"
-                  onmouseover="document.getElementById('img_safeflow').style.opacity='1'">
+                  onmouseover="document.getElementById('img_safeflow').style.opacity='1';document.querySelector('#img_safeflow video').currentTime=0">
                   <td style="padding:16px;width:20%;vertical-align:middle">
                     <div class="one" style="background:#fff;display:flex;align-items:center;justify-content:center;">
-                      <div class="two" id='img_safeflow' style="opacity:0;"></div>
+                      <div class="two" id='img_safeflow' style="opacity:0;"><video width=100% muted autoplay loop>
+                          <source src="images/2025_safeflow.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video></div>
                       <img src='images/2025_safeflow.png' width=100% style="object-fit:contain;">
                     </div>
                   </td>
@@ -344,11 +347,11 @@
 
                 <tr class="pub-row highlighted"
                   onmouseout="document.getElementById('img_cvpr25_4dgs').style.opacity='0'"
-                  onmouseover="document.getElementById('img_cvpr25_4dgs').style.opacity='1'">
+                  onmouseover="document.getElementById('img_cvpr25_4dgs').style.opacity='1';document.querySelector('#img_cvpr25_4dgs video').currentTime=0">
                   <td style="padding:16px;width:20%;vertical-align:middle">
                     <div class="one">
                       <div class="two" id='img_cvpr25_4dgs' style="opacity:0;"><video width=100% muted autoplay loop>
-                          <source src="images/2025_arxiv_4dgs.mp4" type="video/mp4">
+                          <source src="images/2025_cvpr_4dgs_thumbnail.mp4" type="video/mp4">
                           Your browser does not support the video tag.
                         </video></div>
                       <img src='images/2025_arxiv_4dgs.jpg' width=100%>
@@ -602,11 +605,11 @@
 
                 <tr class="pub-row highlighted"
                   onmouseout="document.getElementById('img_iccv21_camdist').style.opacity='0'"
-                  onmouseover="document.getElementById('img_iccv21_camdist').style.opacity='1'">
+                  onmouseover="document.getElementById('img_iccv21_camdist').style.opacity='1';document.querySelector('#img_iccv21_camdist video').currentTime=0">
                   <td style="padding:16px;width:20%;vertical-align:middle">
                     <div class="one">
                       <div class="two" id='img_iccv21_camdist' style="opacity:0;"><video width=100% muted autoplay loop>
-                          <source src="images/2021_iccv_camdist" type="video/jpg">
+                          <source src="images/2021_iccv_camdist.mp4" type="video/mp4">
                           Your browser does not support the video tag.
                         </video></div>
                       <img src='images/2021_iccv_camdist.jpg' width=100%>
