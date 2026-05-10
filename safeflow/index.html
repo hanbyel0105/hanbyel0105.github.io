@@ -60,6 +60,22 @@
   <script src="./static/js/index.js"></script>
 
   <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #14B8A6, #3498db, #6C63FF, #14B8A6);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-animation 6s ease infinite;
+      font-weight: 800;
+    }
+
+    @keyframes gradient-animation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .contribution-box {
       background: #f8f9fa;
       border-left: 4px solid;
@@ -159,8 +175,7 @@
       <div class="container is-max-widescreen">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span style="color: #2ecc71; font-weight: 800;">Safe</span><span
-                style="color: #3498db; font-weight: 800;">Flow</span>: Real-Time Text-Driven Humanoid Whole-Body Control
+            <h1 class="title is-1 publication-title"><span class="gradient-text">SafeFlow</span>: Real-Time Text-Driven Humanoid Whole-Body Control
               via Physics-Guided Rectified Flow and Selective Safety Gating</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
