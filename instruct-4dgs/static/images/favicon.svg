@@ -1,10 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="dgsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ec4899"/>
       <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="#1e293b"/>
-  <text x="32" y="46" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="34" fill="url(#textGrad)" letter-spacing="0">4D</text>
+  <!-- Movie Camera Body -->
+  <rect x="16" y="28" width="24" height="16" rx="2" fill="url(#dgsGrad)"/>
+  <!-- Lens -->
+  <polygon points="40,32 50,26 50,46 40,40" fill="url(#dgsGrad)"/>
+  <!-- Film Reels (representing time/4D) -->
+  <circle cx="22" cy="22" r="5" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="34" cy="22" r="5" fill="#1e293b" stroke="#3b82f6" stroke-width="3"/>
+  <!-- Sparkle (representing Instruct/Editing) -->
+  <path d="M50 14l1.5 4.5L56 20l-4.5 1.5L50 26l-1.5-4.5L44 20l4.5-1.5z" fill="#facc15"/>
 </svg>
