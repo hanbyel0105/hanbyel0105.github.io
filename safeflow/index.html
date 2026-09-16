@@ -243,7 +243,7 @@
           <div class="content has-text-centered">
             <video id="teaser-video" controls muted preload playsinline width="100%"
               style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
-              <source src="./static/videos/SafeFlow_supplementary_video.mp4" type="video/mp4">
+              <source src="./static/videos/safetygate.mp4" type="video/mp4">
             </video>
           </div>
           <div class="content has-text-centered" style="margin-top: 0.5rem;">
@@ -316,19 +316,6 @@
 
           <h2 class="title is-3 has-text-centered mb-3">Real-Robot Deployment</h2>
 
-          <div class="hero-body mb-3">
-            <img src="./static/images/fig6_deployment.JPG" />
-          </div>
-          <div class="content has-text-justified">
-            <p>
-              <b>Real-Robot Deployment of SafeFlow on Unitree G1:</b> The robot executes a continuous long-horizon
-              command sequence with smooth transitions across diverse behaviors, including upper-body gestures ("wave
-              hands", "punch") and whole-body actions ("squat down", "hop on left leg"). A high-risk prompt ("double
-              backflip") is included. The 3-Stage Safety Gate filters the unsafe reference and triggers a standing
-              fallback, allowing the robot to maintain balance and continue execution under subsequent prompts. This
-              demonstrates sim-to-real transferability and deployment-time safety on hardware.
-            </p>
-          </div>
 
           <!-- Real-Robot Comparison Videos -->
           <h3 class="title is-4" style="margin-top: 2.5rem;">Real-Robot Comparison: TextOp vs SafeFlow</h3>
@@ -400,7 +387,7 @@
 
           <!-- Figure 7: Joint-Limit Infeasibility -->
           <div class="hero-body mb-3" style="max-width: 85%; margin: 0 auto;">
-            <img src="./static/images/fig07_joint_limit_tracking.png" />
+            <img style="width: 100%; max-width: 100%;" src="./static/images/fig07_joint_limit_tracking.png" />
           </div>
           <div class="content has-text-justified mb-3">
             <p>
@@ -413,19 +400,16 @@
           </div>
 
           <!-- Safety Gate Demo -->
-          <h3 class="title is-4" style="margin-top: 2.5rem;">Safety Gate in Action</h3>
+          <h3 class="title is-4" style="margin-top: 2.5rem;">Full Supplementary Video</h3>
           <div class="content has-text-centered" style="margin-bottom: 1rem;">
             <video controls muted preload playsinline width="100%"
               style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 85%; margin: 0 auto;">
-              <source src="./static/videos/safetygate.mp4" type="video/mp4">
+              <source src="./static/videos/SafeFlow_supplementary_video.mp4" type="video/mp4">
             </video>
           </div>
           <div class="content has-text-justified">
             <p>
-              When the instability score exceeds the fallback threshold due to unstable flow dynamics, the Safety Gate
-              temporarily overrides the current command and triggers a safe standing fallback. Without the Safety Gate,
-              the robot fails to track the unstable reference motion; with it enabled, the robot remains stable and
-              awaits the next prompt.
+              <b>Full Overview:</b> This supplementary video demonstrates the complete SafeFlow pipeline, including various tracking behaviors, robust text-conditioned generation, and safety fallback mechanisms on the Unitree G1.
             </p>
           </div>
 
@@ -753,6 +737,19 @@
                 </tr>
               </tbody>
             </table>
+          <h3 class="title is-4" style="margin-top: 2rem;">Deployment on Real Hardware</h3>
+          <div class="hero-body mb-3">
+            <img style="width: 100%; max-width: 100%;" src="./static/images/fig6_deployment.JPG" />
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <b>Real-Robot Deployment of SafeFlow on Unitree G1:</b> The robot executes a continuous long-horizon
+              command sequence with smooth transitions across diverse behaviors, including upper-body gestures ("wave
+              hands", "punch") and whole-body actions ("squat down", "hop on left leg"). A high-risk prompt ("double
+              backflip") is included. The 3-Stage Safety Gate filters the unsafe reference and triggers a standing
+              fallback, allowing the robot to maintain balance and continue execution under subsequent prompts. This
+              demonstrates sim-to-real transferability and deployment-time safety on hardware.
+            </p>
           </div>
 
         </div>
