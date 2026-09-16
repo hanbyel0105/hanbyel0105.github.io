@@ -305,6 +305,136 @@
   </section>
 
 
+
+
+  <!-- Real-Robot Deployment -->
+  <section class="section">
+    <div class="container is-max-widescreen">
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+
+          <h2 class="title is-3 has-text-centered mb-3">Real-Robot Deployment</h2>
+
+          <div class="hero-body mb-3">
+            <img src="./static/images/fig6_deployment.JPG" />
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              <b>Real-Robot Deployment of SafeFlow on Unitree G1:</b> The robot executes a continuous long-horizon
+              command sequence with smooth transitions across diverse behaviors, including upper-body gestures ("wave
+              hands", "punch") and whole-body actions ("squat down", "hop on left leg"). A high-risk prompt ("double
+              backflip") is included. The 3-Stage Safety Gate filters the unsafe reference and triggers a standing
+              fallback, allowing the robot to maintain balance and continue execution under subsequent prompts. This
+              demonstrates sim-to-real transferability and deployment-time safety on hardware.
+            </p>
+          </div>
+
+          <!-- Real-Robot Comparison Videos -->
+          <h3 class="title is-4" style="margin-top: 2.5rem;">Real-Robot Comparison: TextOp vs SafeFlow</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              We quantify hardware tracking fidelity by replaying each method's reference on the Unitree G1 for three
+              commands (five 10s trials per cell) and measuring E<sub>dof</sub> from the joint encoders against each
+              method's own reference (23 non-wrist joints). All trials completed without falls or operator intervention.
+              <b>SafeFlow tracks more accurately on every command (16–52% lower E<sub>dof</sub>).</b>
+            </p>
+          </div>
+
+          <div class="content has-text-centered" style="margin-bottom: 2rem;">
+            <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">"Wave hands"</p>
+            <video controls muted preload playsinline width="100%"
+              style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 90%; margin: 0 auto;">
+              <source src="./static/videos/comparison_1_wavehands.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 1.1rem; color: #444; margin-top: 0.6rem;">TextOp: 9.0° → SafeFlow: <b>4.4°</b> (−51%)</p>
+          </div>
+
+          <div class="content has-text-centered" style="margin-bottom: 2rem;">
+            <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">"Squat down"</p>
+            <video controls muted preload playsinline width="100%"
+              style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 90%; margin: 0 auto;">
+              <source src="./static/videos/comparison_2_squat.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 1.1rem; color: #444; margin-top: 0.6rem;">TextOp: 9.3° → SafeFlow: <b>6.1°</b> (−34%)</p>
+          </div>
+
+          <div class="content has-text-centered" style="margin-bottom: 2.5rem;">
+            <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">"Boxing"</p>
+            <video controls muted preload playsinline width="100%"
+              style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 90%; margin: 0 auto;">
+              <source src="./static/videos/comparison_3_boxing.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 1.1rem; color: #444; margin-top: 0.6rem;">TextOp: 17.5° → SafeFlow: <b>14.6°</b> (−17%)</p>
+          </div>
+
+          <!-- Table IV -->
+          <div style="overflow-x: auto; margin-bottom: 2rem;">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th style="text-align: left;">Command</th>
+                  <th>TextOp E<sub>dof</sub> (°)</th>
+                  <th>SafeFlow E<sub>dof</sub> (°)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="baseline">
+                  <td class="method-name">"Wave hands"</td>
+                  <td>9.0 ± 0.2</td>
+                  <td class="best">4.4 ± 0.1</td>
+                </tr>
+                <tr class="baseline">
+                  <td class="method-name">"Squat down"</td>
+                  <td>9.3 ± 0.4</td>
+                  <td class="best">6.1 ± 0.2</td>
+                </tr>
+                <tr>
+                  <td class="method-name">"Boxing"</td>
+                  <td>17.5 ± 0.8</td>
+                  <td class="best">14.6 ± 0.2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Figure 7: Joint-Limit Infeasibility -->
+          <div class="hero-body mb-3" style="max-width: 85%; margin: 0 auto;">
+            <img src="./static/images/fig07_joint_limit_tracking.png" />
+          </div>
+          <div class="content has-text-justified mb-3">
+            <p>
+              <b>Joint-Limit Infeasibility on Real Hardware ("Squat down", right knee):</b>
+              TextOp's reference commands the knee 10–20° beyond the hardware limit for the entire hold phase, which the
+              robot cannot track; SafeFlow's reference stays within limits and is tracked closely.
+              On this command, 18.0% of TextOp's commanded joint samples lie outside the G1's hardware limits, and
+              tracking error on those samples is <b>3.2×</b> that of in-limit samples (21.4° vs. 6.7°).
+            </p>
+          </div>
+
+          <!-- Safety Gate Demo -->
+          <h3 class="title is-4" style="margin-top: 2.5rem;">Safety Gate in Action</h3>
+          <div class="content has-text-centered" style="margin-bottom: 1rem;">
+            <video controls muted preload playsinline width="100%"
+              style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 85%; margin: 0 auto;">
+              <source src="./static/videos/safetygate.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              When the instability score exceeds the fallback threshold due to unstable flow dynamics, the Safety Gate
+              temporarily overrides the current command and triggers a safe standing fallback. Without the Safety Gate,
+              the robot fails to track the unstable reference motion; with it enabled, the robot remains stable and
+              awaits the next prompt.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- Key Contributions -->
   <section class="section" style="padding-top: 0;">
     <div class="container is-max-widescreen">
@@ -630,139 +760,6 @@
     </div>
   </section>
 
-
-  <!-- Real-Robot Deployment -->
-  <section class="section">
-    <div class="container is-max-widescreen">
-
-      <div class="columns is-centered">
-        <div class="column is-four-fifths">
-
-          <h2 class="title is-3 has-text-centered mb-3">Real-Robot Deployment</h2>
-
-          <div class="hero-body mb-3">
-            <img src="./static/images/fig6_deployment.JPG" />
-          </div>
-          <div class="content has-text-justified">
-            <p>
-              <b>Real-Robot Deployment of SafeFlow on Unitree G1:</b> The robot executes a continuous long-horizon
-              command sequence with smooth transitions across diverse behaviors, including upper-body gestures ("wave
-              hands", "punch") and whole-body actions ("squat down", "hop on left leg"). A high-risk prompt ("double
-              backflip") is included. The 3-Stage Safety Gate filters the unsafe reference and triggers a standing
-              fallback, allowing the robot to maintain balance and continue execution under subsequent prompts. This
-              demonstrates sim-to-real transferability and deployment-time safety on hardware.
-            </p>
-          </div>
-
-          <!-- Real-Robot Comparison Videos -->
-          <h3 class="title is-4" style="margin-top: 2.5rem;">Real-Robot Comparison: TextOp vs SafeFlow</h3>
-          <div class="content has-text-justified mb-4">
-            <p>
-              We quantify hardware tracking fidelity by replaying each method's reference on the Unitree G1 for three
-              commands (five 10s trials per cell) and measuring E<sub>dof</sub> from the joint encoders against each
-              method's own reference (23 non-wrist joints). All trials completed without falls or operator intervention.
-              <b>SafeFlow tracks more accurately on every command (16–52% lower E<sub>dof</sub>).</b>
-            </p>
-          </div>
-
-          <div class="columns is-centered" style="margin-bottom: 1.5rem;">
-            <div class="column is-one-third">
-              <div class="content has-text-centered">
-                <p style="font-weight: 600; margin-bottom: 0.5rem;">"Wave hands"</p>
-                <video controls muted preload playsinline width="100%"
-                  style="border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
-                  <source src="./static/videos/comparison_1_wavehands.mp4" type="video/mp4">
-                </video>
-                <p style="font-size: 0.85rem; color: #666; margin-top: 0.4rem;">TextOp: 9.0° → SafeFlow: <b>4.4°</b> (−51%)</p>
-              </div>
-            </div>
-            <div class="column is-one-third">
-              <div class="content has-text-centered">
-                <p style="font-weight: 600; margin-bottom: 0.5rem;">"Squat down"</p>
-                <video controls muted preload playsinline width="100%"
-                  style="border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
-                  <source src="./static/videos/comparison_2_squat.mp4" type="video/mp4">
-                </video>
-                <p style="font-size: 0.85rem; color: #666; margin-top: 0.4rem;">TextOp: 9.3° → SafeFlow: <b>6.1°</b> (−34%)</p>
-              </div>
-            </div>
-            <div class="column is-one-third">
-              <div class="content has-text-centered">
-                <p style="font-weight: 600; margin-bottom: 0.5rem;">"Boxing"</p>
-                <video controls muted preload playsinline width="100%"
-                  style="border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
-                  <source src="./static/videos/comparison_3_boxing.mp4" type="video/mp4">
-                </video>
-                <p style="font-size: 0.85rem; color: #666; margin-top: 0.4rem;">TextOp: 17.5° → SafeFlow: <b>14.6°</b> (−17%)</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Table IV -->
-          <div style="overflow-x: auto; margin-bottom: 2rem;">
-            <table class="result-table">
-              <thead>
-                <tr>
-                  <th style="text-align: left;">Command</th>
-                  <th>TextOp E<sub>dof</sub> (°)</th>
-                  <th>SafeFlow E<sub>dof</sub> (°)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="baseline">
-                  <td class="method-name">"Wave hands"</td>
-                  <td>9.0 ± 0.2</td>
-                  <td class="best">4.4 ± 0.1</td>
-                </tr>
-                <tr class="baseline">
-                  <td class="method-name">"Squat down"</td>
-                  <td>9.3 ± 0.4</td>
-                  <td class="best">6.1 ± 0.2</td>
-                </tr>
-                <tr>
-                  <td class="method-name">"Boxing"</td>
-                  <td>17.5 ± 0.8</td>
-                  <td class="best">14.6 ± 0.2</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Figure 7: Joint-Limit Infeasibility -->
-          <div class="hero-body mb-3" style="max-width: 85%; margin: 0 auto;">
-            <img src="./static/images/fig07_joint_limit_tracking.png" />
-          </div>
-          <div class="content has-text-justified mb-3">
-            <p>
-              <b>Joint-Limit Infeasibility on Real Hardware ("Squat down", right knee):</b>
-              TextOp's reference commands the knee 10–20° beyond the hardware limit for the entire hold phase, which the
-              robot cannot track; SafeFlow's reference stays within limits and is tracked closely.
-              On this command, 18.0% of TextOp's commanded joint samples lie outside the G1's hardware limits, and
-              tracking error on those samples is <b>3.2×</b> that of in-limit samples (21.4° vs. 6.7°).
-            </p>
-          </div>
-
-          <!-- Safety Gate Demo -->
-          <h3 class="title is-4" style="margin-top: 2.5rem;">Safety Gate in Action</h3>
-          <div class="content has-text-centered" style="margin-bottom: 1rem;">
-            <video controls muted preload playsinline width="100%"
-              style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 85%; margin: 0 auto;">
-              <source src="./static/videos/safetygate.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="content has-text-justified">
-            <p>
-              When the instability score exceeds the fallback threshold due to unstable flow dynamics, the Safety Gate
-              temporarily overrides the current command and triggers a safe standing fallback. Without the Safety Gate,
-              the robot fails to track the unstable reference motion; with it enabled, the robot remains stable and
-              awaits the next prompt.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
 
 
   <!-- Citation -->
