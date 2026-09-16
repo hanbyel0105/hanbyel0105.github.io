@@ -411,12 +411,12 @@
           <h2 class="title is-3 has-text-centered mb-3">Results</h2>
 
           <!-- Table 1: Physical Executability -->
-          <h3 class="title is-4">Physical Executability & Tracking Fidelity</h3>
+          <h3 class="title is-4">Physical Executability & Cross-Tracker Tracking Fidelity</h3>
           <div class="content has-text-justified mb-4">
             <p>
-              <b>SafeFlow</b> improves generator compliance and downstream tracking fidelity.
-              Joint limit violations drop from <b>43.14%</b> to <b>3.08%</b>, and the success rate increases from
-              <b>80.6%</b> to <b>98.5%</b>.
+              <b>SafeFlow</b> improves generator compliance and downstream tracking fidelity across <b>three independent trackers</b>.
+              Joint limit violations drop from <b>43.14%</b> to <b>3.08%</b>, and success rate reaches
+              <b>98.6–99.1%</b> across all trackers (vs. 74.6–81.3% for TextOp).
             </p>
           </div>
           <div style="overflow-x: auto; margin-bottom: 2rem;">
@@ -425,53 +425,108 @@
                 <tr>
                   <th rowspan="2" style="text-align: left;">Method</th>
                   <th colspan="2">Generator-Only</th>
-                  <th colspan="4">System-Level Tracking Fidelity</th>
+                  <th colspan="3">Base Tracker</th>
+                  <th colspan="3">SONIC</th>
+                  <th colspan="3">MOSAIC</th>
                 </tr>
                 <tr>
                   <th>JV ↓</th>
                   <th>SC ↓</th>
                   <th>Succ. ↑</th>
                   <th>E<sub>mpjpe</sub> ↓</th>
-                  <th>E<sub>vel</sub> ↓</th>
-                  <th>E<sub>acc</sub> ↓</th>
+                  <th>E<sub>dof</sub> ↓</th>
+                  <th>Succ. ↑</th>
+                  <th>E<sub>mpjpe</sub> ↓</th>
+                  <th>E<sub>dof</sub> ↓</th>
+                  <th>Succ. ↑</th>
+                  <th>E<sub>mpjpe</sub> ↓</th>
+                  <th>E<sub>dof</sub> ↓</th>
                 </tr>
               </thead>
               <tbody>
+                <tr class="baseline">
+                  <td class="method-name">MDM+GMR (offline)</td>
+                  <td>0.79%†</td>
+                  <td>30.48%</td>
+                  <td>87.3%</td>
+                  <td>45.2</td>
+                  <td>4.96</td>
+                  <td>92.6%</td>
+                  <td>40.3</td>
+                  <td>8.97</td>
+                  <td>89.0%</td>
+                  <td>44.3</td>
+                  <td>7.53</td>
+                </tr>
                 <tr class="baseline">
                   <td class="method-name">TextOp (Baseline)</td>
                   <td>43.14%</td>
                   <td>11.05%</td>
                   <td>80.6%</td>
-                  <td>81.42</td>
-                  <td>0.23</td>
-                  <td>10.61</td>
+                  <td>82.5</td>
+                  <td>5.94</td>
+                  <td>81.3%</td>
+                  <td>45.9</td>
+                  <td>8.36</td>
+                  <td>74.6%</td>
+                  <td>49.3</td>
+                  <td>8.38</td>
+                </tr>
+                <tr class="baseline">
+                  <td class="method-name">+critic-align (RobotMDM-style)</td>
+                  <td>24.08%</td>
+                  <td>12.94%</td>
+                  <td>87.6%</td>
+                  <td>92.2</td>
+                  <td>5.28</td>
+                  <td>84.5%</td>
+                  <td>43.7</td>
+                  <td>8.19</td>
+                  <td>79.3%</td>
+                  <td>47.1</td>
+                  <td>7.68</td>
                 </tr>
                 <tr>
                   <td class="method-name">SafeFlow (Flow)</td>
                   <td>12.75%</td>
                   <td>7.25%</td>
-                  <td>92.7%</td>
-                  <td>55.32</td>
-                  <td>0.17</td>
-                  <td>7.98</td>
+                  <td>92.8%</td>
+                  <td>59.6</td>
+                  <td>4.73</td>
+                  <td>91.9%</td>
+                  <td>34.4</td>
+                  <td>6.42</td>
+                  <td>90.2%</td>
+                  <td>36.2</td>
+                  <td>6.13</td>
                 </tr>
                 <tr>
                   <td class="method-name">SafeFlow (+ Guid.)</td>
                   <td>6.32%</td>
                   <td>4.39%</td>
-                  <td>98.0%</td>
-                  <td>46.39</td>
-                  <td>0.11</td>
-                  <td>5.48</td>
+                  <td>97.9%</td>
+                  <td>51.2</td>
+                  <td>4.43</td>
+                  <td>96.4%</td>
+                  <td>30.8</td>
+                  <td>5.77</td>
+                  <td>97.1%</td>
+                  <td>31.2</td>
+                  <td>5.52</td>
                 </tr>
                 <tr>
                   <td class="method-name" style="font-weight: 700;">SafeFlow (+ Guid. & Reflow)</td>
                   <td class="best">3.08%</td>
                   <td class="best">1.42%</td>
-                  <td class="best">98.5%</td>
-                  <td class="best">40.89</td>
-                  <td class="best">0.09</td>
-                  <td class="best">4.54</td>
+                  <td class="best">98.6%</td>
+                  <td class="best">44.0</td>
+                  <td class="best">4.32</td>
+                  <td class="best">99.1%</td>
+                  <td class="best">29.6</td>
+                  <td class="best">5.15</td>
+                  <td class="best">98.7%</td>
+                  <td class="best">27.6</td>
+                  <td class="best">5.00</td>
                 </tr>
               </tbody>
             </table>
@@ -601,6 +656,111 @@
               backflip") is included. The 3-Stage Safety Gate filters the unsafe reference and triggers a standing
               fallback, allowing the robot to maintain balance and continue execution under subsequent prompts. This
               demonstrates sim-to-real transferability and deployment-time safety on hardware.
+            </p>
+          </div>
+
+          <!-- Real-Robot Comparison Videos -->
+          <h3 class="title is-4" style="margin-top: 2.5rem;">Real-Robot Comparison: TextOp vs SafeFlow</h3>
+          <div class="content has-text-justified mb-4">
+            <p>
+              We quantify hardware tracking fidelity by replaying each method's reference on the Unitree G1 for three
+              commands (five 10s trials per cell) and measuring E<sub>dof</sub> from the joint encoders against each
+              method's own reference (23 non-wrist joints). All trials completed without falls or operator intervention.
+              <b>SafeFlow tracks more accurately on every command (16–52% lower E<sub>dof</sub>).</b>
+            </p>
+          </div>
+
+          <div class="columns is-centered" style="margin-bottom: 1.5rem;">
+            <div class="column is-one-third">
+              <div class="content has-text-centered">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">"Wave hands"</p>
+                <video controls muted preload playsinline width="100%"
+                  style="border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
+                  <source src="./static/videos/comparison_1_wavehands.mp4" type="video/mp4">
+                </video>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.4rem;">TextOp: 9.0° → SafeFlow: <b>4.4°</b> (−51%)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="content has-text-centered">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">"Squat down"</p>
+                <video controls muted preload playsinline width="100%"
+                  style="border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
+                  <source src="./static/videos/comparison_2_squat.mp4" type="video/mp4">
+                </video>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.4rem;">TextOp: 9.3° → SafeFlow: <b>6.1°</b> (−34%)</p>
+              </div>
+            </div>
+            <div class="column is-one-third">
+              <div class="content has-text-centered">
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">"Boxing"</p>
+                <video controls muted preload playsinline width="100%"
+                  style="border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.12);">
+                  <source src="./static/videos/comparison_3_boxing.mp4" type="video/mp4">
+                </video>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 0.4rem;">TextOp: 17.5° → SafeFlow: <b>14.6°</b> (−17%)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table IV -->
+          <div style="overflow-x: auto; margin-bottom: 2rem;">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th style="text-align: left;">Command</th>
+                  <th>TextOp E<sub>dof</sub> (°)</th>
+                  <th>SafeFlow E<sub>dof</sub> (°)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="baseline">
+                  <td class="method-name">"Wave hands"</td>
+                  <td>9.0 ± 0.2</td>
+                  <td class="best">4.4 ± 0.1</td>
+                </tr>
+                <tr class="baseline">
+                  <td class="method-name">"Squat down"</td>
+                  <td>9.3 ± 0.4</td>
+                  <td class="best">6.1 ± 0.2</td>
+                </tr>
+                <tr>
+                  <td class="method-name">"Boxing"</td>
+                  <td>17.5 ± 0.8</td>
+                  <td class="best">14.6 ± 0.2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Figure 7: Joint-Limit Infeasibility -->
+          <div class="hero-body mb-3" style="max-width: 85%; margin: 0 auto;">
+            <img src="./static/images/fig07_joint_limit_tracking.png" />
+          </div>
+          <div class="content has-text-justified mb-3">
+            <p>
+              <b>Joint-Limit Infeasibility on Real Hardware ("Squat down", right knee):</b>
+              TextOp's reference commands the knee 10–20° beyond the hardware limit for the entire hold phase, which the
+              robot cannot track; SafeFlow's reference stays within limits and is tracked closely.
+              On this command, 18.0% of TextOp's commanded joint samples lie outside the G1's hardware limits, and
+              tracking error on those samples is <b>3.2×</b> that of in-limit samples (21.4° vs. 6.7°).
+            </p>
+          </div>
+
+          <!-- Safety Gate Demo -->
+          <h3 class="title is-4" style="margin-top: 2.5rem;">Safety Gate in Action</h3>
+          <div class="content has-text-centered" style="margin-bottom: 1rem;">
+            <video controls muted preload playsinline width="100%"
+              style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); max-width: 85%; margin: 0 auto;">
+              <source src="./static/videos/safetygate.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              When the instability score exceeds the fallback threshold due to unstable flow dynamics, the Safety Gate
+              temporarily overrides the current command and triggers a safe standing fallback. Without the Safety Gate,
+              the robot fails to track the unstable reference motion; with it enabled, the robot remains stable and
+              awaits the next prompt.
             </p>
           </div>
 
