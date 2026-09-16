@@ -248,9 +248,7 @@
           </div>
           <div class="content has-text-centered" style="margin-top: 0.5rem;">
             <p style="color: #666; font-size: 0.95rem;">
-              <b>SafeFlow</b> enables real-time text-driven humanoid control with physics-guided generation and a
-              3-Stage Safety Gate.
-              When unsafe commands are detected, the system triggers a <b>safe fallback</b> to protect the robot.
+              <b>SafeFlow</b> enables real-time text-driven humanoid control by generating <b>physically executable reference motions</b> via physics-guided flow matching. Alongside, a 3-Stage Safety Gate filters unsafe commands to trigger a <b>safe fallback</b>, ensuring robust and safe deployment on real hardware.
             </p>
           </div>
         </div>
@@ -321,10 +319,9 @@
           <h3 class="title is-4" style="margin-top: 2.5rem;">Real-Robot Comparison: TextOp vs SafeFlow</h3>
           <div class="content has-text-justified mb-4">
             <p>
-              We quantify hardware tracking fidelity by replaying each method's reference on the Unitree G1 for three
-              commands (five 10s trials per cell) and measuring E<sub>dof</sub> from the joint encoders against each
-              method's own reference (23 non-wrist joints). All trials completed without falls or operator intervention.
-              <b>SafeFlow tracks more accurately on every command (16–52% lower E<sub>dof</sub>).</b>
+              We quantify hardware tracking fidelity by replaying each method's reference on the Unitree G1 <b>using the exact same downstream tracking controller</b>. For three commands (five 10s trials per cell), we measure E<sub>dof</sub> from the joint encoders against each method's own reference (23 non-wrist joints). All trials completed without falls or operator intervention.
+              <br><br>
+              By providing <b>physically executable reference motions</b>, <b>SafeFlow tracks significantly more accurately on every command (16–52% lower E<sub>dof</sub>)</b> compared to the kinematics-only baseline (TextOp).
             </p>
           </div>
 
