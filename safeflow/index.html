@@ -190,7 +190,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Future Robot AI Group, Samsung Electronics</span>
+              <span class="author-block">Physical AI Lab, RX, Samsung Electronics</span>
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -294,8 +294,8 @@
               Mahalanobis score in text-embedding space, filtering unstable generations via a directional sensitivity
               discrepancy metric, and enforcing final hard kinematic constraints such as joint and velocity limits
               before passing the generated trajectory to a low-level motion tracking controller. Extensive experiments
-              on the Unitree G1 demonstrate that <b>SafeFlow</b> outperforms prior diffusion-based methods in success
-              rate, physical compliance, and inference speed, while maintaining diverse expressiveness.
+              on the Unitree G1 demonstrate that <b>SafeFlow</b> outperforms diffusion- and retargeting-based baselines in success
+              rate, physical compliance, and inference speed while preserving motion diversity, with consistent gains across three downstream tracking controllers.
             </p>
           </div>
         </div>
@@ -358,13 +358,10 @@
           </div>
           <div class="content has-text-justified mb-3">
             <p>
-              <b>Failure Cases of a Baseline Text-Driven Reference Motion Generator:</b> While a kinematics-only
-              baseline produces physically feasible motions for simple prompts <b>(a)</b>, it often generates
-              <i>infeasible</i> references—including joint limit violations <b>(b)</b> and self-collisions
-              <b>(c)</b>—even under <i>in-distribution</i> commands. For <i>out-of-distribution</i> prompts, the
-              generation process becomes unstable, leading to structural collapse and <i>unsafe</i>, implausible
-              full-body configurations <b>(d)</b>. These failure modes underscore the critical need for physics-guided
-              generation and runtime safety gating.
+              <b>Failure Cases of a Kinematics-Only Generator:</b> Feasible motion for a simple prompt
+              <b>(a)</b>; joint limit violations <b>(b)</b> and self-collisions <b>(c)</b> under in-distribution
+              commands; structural collapse under OOD prompts <b>(d)</b>—motivating physics-guided generation and
+              runtime safety gating.
             </p>
           </div>
         </div>
@@ -551,10 +548,10 @@
           </div>
           <div class="content has-text-justified mb-3">
             <p>
-              <b>Generation Instability Score 𝓡 Detects Failure-Prone References:</b> Mean tracking MPJPE of 10-frame
-              windows grouped into absolute 𝓡 quintiles for In-Distribution (ID) and Out-of-Distribution (OOD)
-              sequences. MPJPE increases monotonically with 𝓡, indicating that high-𝓡 windows correspond to physically
-              unstable references.
+              <b>𝓡 Detects Failure-Prone References:</b> Mean tracking MPJPE of 10-frame
+              windows increases monotonically across shared absolute 𝓡 quintiles in both ID and OOD. Even ID prompts
+              produce high-instability windows (ID Q5, 87.4 mm) exceeding low-𝓡 OOD windows (OOD Q1, 56.6 mm)—showing
+              Stage 1 alone is insufficient and motivating the complementary Stage 2 filter.
             </p>
           </div>
 
@@ -563,11 +560,9 @@
           </div>
           <div class="content has-text-justified">
             <p>
-              <b>Instability Score-Triggered Safe Fallback:</b> When the instability score 𝓡 exceeds the fallback
-              threshold due to unstable flow dynamics, Stage 2 temporarily overrides the current command, injects a
-              standing prompt, and interpolates the tracker reference toward a predefined standing pose. Without Stage
-              2, the robot fails to track the unstable reference motion; with Stage 2 enabled, it remains stable and
-              awaits the next prompt.
+              <b>Instability-Triggered Safe Fallback:</b> When 𝓡 exceeds threshold, Stage 2 overrides
+              the command with a standing prompt and interpolates to a nominal pose. Without Stage 2 the robot
+              collapses on the unstable reference; with it, the robot remains stable and awaits the next prompt.
             </p>
           </div>
 
